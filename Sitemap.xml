@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+   <url>
+      <loc>https://jbinproject.online/</loc>
+      <lastmod>2020-10-07</lastmod>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://jbinproject.online/index.html</loc>
+      <lastmod>2020-10-07</lastmod>
+      <priority>0.5</priority>
+   </url>
+   <url>
+      <loc>https://jbinproject.online/JBin ProjectEN.html</loc>
+      <lastmod>2020-10-07</lastmod>
+      <priority>0.5</priority>
+   </url>
+   <url>
+      <loc>https://jbinproject.online/JBin ProjectKR.html</loc>
+      <lastmod>2020-10-07</lastmod>
+      <priority>0.5</priority>
+   </url>
+</urlset>

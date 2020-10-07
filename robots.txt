@@ -1,3 +1,4 @@
+Sitemap: https://jbinproject.online/Sitemap.xml
 User-agent: *
 Allow: /
 User-Agent: *
