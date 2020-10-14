@@ -4305,7 +4305,6 @@ ol {
 .u-text:not(ul):not(ol):not(p):not(.u-post-content):not(.u-block-content):not(.u-product-desc) a,
 .u-text:not(ul):not(ol):not(p):not(.u-post-content):not(.u-block-content):not(.u-product-desc) a:hover {
   text-decoration: none;
-  border-width: 0;
 }
 .u-link,
 a {
@@ -7418,7 +7417,6 @@ blockquote.u-text.u-indent-0 {
 .u-image,
 .u-background-effect-image,
 .u-video-poster {
-  border-width: 0;
   object-fit: cover;
   display: block;
   vertical-align: middle;
@@ -11341,6 +11339,10 @@ section.u-image,
   background-color: transparent !important;
   background-image: none !important;
 }
+.u-offcanvas-opened .u-header.u-sticky {
+  z-index: auto;
+  position: absolute !important;
+}
 .u-hide-header .u-header,
 .u-hide-footer .u-footer {
   display: none;
@@ -13153,7 +13155,6 @@ section.u-image,
 }
 .u-group {
   display: flex;
-  border-width: 0;
 }
 .u-line.u-line-horizontal {
   border-right-width: 0;
@@ -13164,9 +13165,6 @@ section.u-image,
   border-right-width: 0;
   border-bottom-width: 0;
   border-top-width: 0;
-}
-.u-shape {
-  border-width: 0;
 }
 .u-shape-svg {
   border: none !important;
@@ -16548,9 +16546,6 @@ a.pswp__share--download:hover {
 .u-no-transition *:after {
   transition: none !important;
 }
-.u-gallery-item {
-  border-width: 0px;
-}
 .u-repeater {
   display: grid;
   grid-template-columns: repeat(3, 33.33333333%);
@@ -16558,7 +16553,6 @@ a.pswp__share--download:hover {
 .u-repeater-item {
   display: flex;
   position: relative;
-  border-width: 0px;
 }
 .u-table table {
   width: 100%;
@@ -16785,12 +16779,16 @@ a.pswp__share--download:hover {
 }
 .u-table-cell .u-btn,
 .u-text .u-btn {
-  display: inline;
+  display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
   vertical-align: baseline;
   white-space: normal;
   text-align: inherit;
+}
+.u-table-cell .u-btn.u-button-link,
+.u-text .u-btn.u-button-link {
+  display: inline;
 }
 .u-slider {
   display: flex;
@@ -16816,30 +16814,61 @@ a.pswp__share--download:hover {
   grid-template-columns: repeat(3, auto);
   min-height: 100%;
 }
+.u-layout-thumbnails,
 .u-layout-carousel {
   display: flex;
 }
+.u-layout-thumbnails .u-carousel-inner,
 .u-layout-carousel .u-carousel-inner {
   flex: 1;
 }
+.u-layout-thumbnails .u-carousel-item,
 .u-layout-carousel .u-carousel-item {
   height: 100%;
   flex-direction: column;
 }
+.u-layout-thumbnails .u-carousel-item.u-active,
 .u-layout-carousel .u-carousel-item.u-active,
+.u-layout-thumbnails .u-carousel-item.u-carousel-item-next,
 .u-layout-carousel .u-carousel-item.u-carousel-item-next,
+.u-layout-thumbnails .u-carousel-item.u-carousel-item-prev,
 .u-layout-carousel .u-carousel-item.u-carousel-item-prev {
   display: flex;
 }
+.u-layout-thumbnails .u-carousel-item .u-back-slide,
 .u-layout-carousel .u-carousel-item .u-back-slide {
   position: relative;
 }
-.u-layout-carousel .u-carousel-item .u-over-slide {
+.u-layout-carousel .u-over-slide {
   position: relative;
   height: auto;
 }
-.u-products-item {
-  border-width: 0px;
+.u-layout-thumbnails {
+  flex-direction: column;
+  grid-gap: 0 !important;
+}
+.u-layout-thumbnails .u-over-slide {
+  display: none;
+}
+.u-layout-thumbnails .u-carousel-indicators {
+  display: none;
+}
+.u-layout-thumbnails .u-carousel-thumbnails {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  overflow-x: auto;
+}
+.u-layout-thumbnails .u-carousel-thumbnail {
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.u-carousel-thumbnail-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .u-product {
   display: flex;
@@ -16892,7 +16921,6 @@ a.pswp__share--download:hover {
 .u-dialog {
   display: flex;
   position: relative;
-  border-width: 0;
 }
 .u-dialog-close-button {
   position: absolute;
@@ -16975,7 +17003,6 @@ a.pswp__share--download:hover {
   margin: 0;
   -webkit-text-decoration-skip: objects;
   border: none;
-  border-width: 0;
   margin: 0 !important;
   position: absolute;
   top: 0;
@@ -17287,9 +17314,6 @@ a.pswp__share--download:hover {
 .u-carousel-right .u-carousel-inner .u-active.u-carousel-item-left {
   transform: translate3d(100%, 0, 0);
 }
-.u-btn.u-gradient {
-  border-width: 0;
-}
 [class*="u-border-"],
 .u-link[class*="u-border-"] {
   border-style: solid;
@@ -17546,310 +17570,310 @@ a.u-button-style.u-border-20 {
 .u-link.u-border-20 {
   border-width: 0 0 20px 0;
 }
-.u-border-radius-0,
-.u-border-radius-0:before,
-.u-border-radius-0 .u-background-effect,
-.u-border-radius-0 > .u-container-layout {
+.u-radius-0,
+.u-radius-0:before,
+.u-radius-0 .u-background-effect,
+.u-radius-0 > .u-container-layout {
   border-radius: 0px !important;
 }
-.u-border-radius-1,
-.u-border-radius-1:before,
-.u-border-radius-1 .u-background-effect,
-.u-border-radius-1 > .u-container-layout {
+.u-radius-1,
+.u-radius-1:before,
+.u-radius-1 .u-background-effect,
+.u-radius-1 > .u-container-layout {
   border-radius: 1px !important;
 }
-.u-border-radius-2,
-.u-border-radius-2:before,
-.u-border-radius-2 .u-background-effect,
-.u-border-radius-2 > .u-container-layout {
+.u-radius-2,
+.u-radius-2:before,
+.u-radius-2 .u-background-effect,
+.u-radius-2 > .u-container-layout {
   border-radius: 2px !important;
 }
-.u-border-radius-3,
-.u-border-radius-3:before,
-.u-border-radius-3 .u-background-effect,
-.u-border-radius-3 > .u-container-layout {
+.u-radius-3,
+.u-radius-3:before,
+.u-radius-3 .u-background-effect,
+.u-radius-3 > .u-container-layout {
   border-radius: 3px !important;
 }
-.u-border-radius-4,
-.u-border-radius-4:before,
-.u-border-radius-4 .u-background-effect,
-.u-border-radius-4 > .u-container-layout {
+.u-radius-4,
+.u-radius-4:before,
+.u-radius-4 .u-background-effect,
+.u-radius-4 > .u-container-layout {
   border-radius: 4px !important;
 }
-.u-border-radius-5,
-.u-border-radius-5:before,
-.u-border-radius-5 .u-background-effect,
-.u-border-radius-5 > .u-container-layout {
+.u-radius-5,
+.u-radius-5:before,
+.u-radius-5 .u-background-effect,
+.u-radius-5 > .u-container-layout {
   border-radius: 5px !important;
 }
-.u-border-radius-6,
-.u-border-radius-6:before,
-.u-border-radius-6 .u-background-effect,
-.u-border-radius-6 > .u-container-layout {
+.u-radius-6,
+.u-radius-6:before,
+.u-radius-6 .u-background-effect,
+.u-radius-6 > .u-container-layout {
   border-radius: 6px !important;
 }
-.u-border-radius-7,
-.u-border-radius-7:before,
-.u-border-radius-7 .u-background-effect,
-.u-border-radius-7 > .u-container-layout {
+.u-radius-7,
+.u-radius-7:before,
+.u-radius-7 .u-background-effect,
+.u-radius-7 > .u-container-layout {
   border-radius: 7px !important;
 }
-.u-border-radius-8,
-.u-border-radius-8:before,
-.u-border-radius-8 .u-background-effect,
-.u-border-radius-8 > .u-container-layout {
+.u-radius-8,
+.u-radius-8:before,
+.u-radius-8 .u-background-effect,
+.u-radius-8 > .u-container-layout {
   border-radius: 8px !important;
 }
-.u-border-radius-9,
-.u-border-radius-9:before,
-.u-border-radius-9 .u-background-effect,
-.u-border-radius-9 > .u-container-layout {
+.u-radius-9,
+.u-radius-9:before,
+.u-radius-9 .u-background-effect,
+.u-radius-9 > .u-container-layout {
   border-radius: 9px !important;
 }
-.u-border-radius-10,
-.u-border-radius-10:before,
-.u-border-radius-10 .u-background-effect,
-.u-border-radius-10 > .u-container-layout {
+.u-radius-10,
+.u-radius-10:before,
+.u-radius-10 .u-background-effect,
+.u-radius-10 > .u-container-layout {
   border-radius: 10px !important;
 }
-.u-border-radius-11,
-.u-border-radius-11:before,
-.u-border-radius-11 .u-background-effect,
-.u-border-radius-11 > .u-container-layout {
+.u-radius-11,
+.u-radius-11:before,
+.u-radius-11 .u-background-effect,
+.u-radius-11 > .u-container-layout {
   border-radius: 11px !important;
 }
-.u-border-radius-12,
-.u-border-radius-12:before,
-.u-border-radius-12 .u-background-effect,
-.u-border-radius-12 > .u-container-layout {
+.u-radius-12,
+.u-radius-12:before,
+.u-radius-12 .u-background-effect,
+.u-radius-12 > .u-container-layout {
   border-radius: 12px !important;
 }
-.u-border-radius-13,
-.u-border-radius-13:before,
-.u-border-radius-13 .u-background-effect,
-.u-border-radius-13 > .u-container-layout {
+.u-radius-13,
+.u-radius-13:before,
+.u-radius-13 .u-background-effect,
+.u-radius-13 > .u-container-layout {
   border-radius: 13px !important;
 }
-.u-border-radius-14,
-.u-border-radius-14:before,
-.u-border-radius-14 .u-background-effect,
-.u-border-radius-14 > .u-container-layout {
+.u-radius-14,
+.u-radius-14:before,
+.u-radius-14 .u-background-effect,
+.u-radius-14 > .u-container-layout {
   border-radius: 14px !important;
 }
-.u-border-radius-15,
-.u-border-radius-15:before,
-.u-border-radius-15 .u-background-effect,
-.u-border-radius-15 > .u-container-layout {
+.u-radius-15,
+.u-radius-15:before,
+.u-radius-15 .u-background-effect,
+.u-radius-15 > .u-container-layout {
   border-radius: 15px !important;
 }
-.u-border-radius-16,
-.u-border-radius-16:before,
-.u-border-radius-16 .u-background-effect,
-.u-border-radius-16 > .u-container-layout {
+.u-radius-16,
+.u-radius-16:before,
+.u-radius-16 .u-background-effect,
+.u-radius-16 > .u-container-layout {
   border-radius: 16px !important;
 }
-.u-border-radius-17,
-.u-border-radius-17:before,
-.u-border-radius-17 .u-background-effect,
-.u-border-radius-17 > .u-container-layout {
+.u-radius-17,
+.u-radius-17:before,
+.u-radius-17 .u-background-effect,
+.u-radius-17 > .u-container-layout {
   border-radius: 17px !important;
 }
-.u-border-radius-18,
-.u-border-radius-18:before,
-.u-border-radius-18 .u-background-effect,
-.u-border-radius-18 > .u-container-layout {
+.u-radius-18,
+.u-radius-18:before,
+.u-radius-18 .u-background-effect,
+.u-radius-18 > .u-container-layout {
   border-radius: 18px !important;
 }
-.u-border-radius-19,
-.u-border-radius-19:before,
-.u-border-radius-19 .u-background-effect,
-.u-border-radius-19 > .u-container-layout {
+.u-radius-19,
+.u-radius-19:before,
+.u-radius-19 .u-background-effect,
+.u-radius-19 > .u-container-layout {
   border-radius: 19px !important;
 }
-.u-border-radius-20,
-.u-border-radius-20:before,
-.u-border-radius-20 .u-background-effect,
-.u-border-radius-20 > .u-container-layout {
+.u-radius-20,
+.u-radius-20:before,
+.u-radius-20 .u-background-effect,
+.u-radius-20 > .u-container-layout {
   border-radius: 20px !important;
 }
-.u-border-radius-21,
-.u-border-radius-21:before,
-.u-border-radius-21 .u-background-effect,
-.u-border-radius-21 > .u-container-layout {
+.u-radius-21,
+.u-radius-21:before,
+.u-radius-21 .u-background-effect,
+.u-radius-21 > .u-container-layout {
   border-radius: 21px !important;
 }
-.u-border-radius-22,
-.u-border-radius-22:before,
-.u-border-radius-22 .u-background-effect,
-.u-border-radius-22 > .u-container-layout {
+.u-radius-22,
+.u-radius-22:before,
+.u-radius-22 .u-background-effect,
+.u-radius-22 > .u-container-layout {
   border-radius: 22px !important;
 }
-.u-border-radius-23,
-.u-border-radius-23:before,
-.u-border-radius-23 .u-background-effect,
-.u-border-radius-23 > .u-container-layout {
+.u-radius-23,
+.u-radius-23:before,
+.u-radius-23 .u-background-effect,
+.u-radius-23 > .u-container-layout {
   border-radius: 23px !important;
 }
-.u-border-radius-24,
-.u-border-radius-24:before,
-.u-border-radius-24 .u-background-effect,
-.u-border-radius-24 > .u-container-layout {
+.u-radius-24,
+.u-radius-24:before,
+.u-radius-24 .u-background-effect,
+.u-radius-24 > .u-container-layout {
   border-radius: 24px !important;
 }
-.u-border-radius-25,
-.u-border-radius-25:before,
-.u-border-radius-25 .u-background-effect,
-.u-border-radius-25 > .u-container-layout {
+.u-radius-25,
+.u-radius-25:before,
+.u-radius-25 .u-background-effect,
+.u-radius-25 > .u-container-layout {
   border-radius: 25px !important;
 }
-.u-border-radius-26,
-.u-border-radius-26:before,
-.u-border-radius-26 .u-background-effect,
-.u-border-radius-26 > .u-container-layout {
+.u-radius-26,
+.u-radius-26:before,
+.u-radius-26 .u-background-effect,
+.u-radius-26 > .u-container-layout {
   border-radius: 26px !important;
 }
-.u-border-radius-27,
-.u-border-radius-27:before,
-.u-border-radius-27 .u-background-effect,
-.u-border-radius-27 > .u-container-layout {
+.u-radius-27,
+.u-radius-27:before,
+.u-radius-27 .u-background-effect,
+.u-radius-27 > .u-container-layout {
   border-radius: 27px !important;
 }
-.u-border-radius-28,
-.u-border-radius-28:before,
-.u-border-radius-28 .u-background-effect,
-.u-border-radius-28 > .u-container-layout {
+.u-radius-28,
+.u-radius-28:before,
+.u-radius-28 .u-background-effect,
+.u-radius-28 > .u-container-layout {
   border-radius: 28px !important;
 }
-.u-border-radius-29,
-.u-border-radius-29:before,
-.u-border-radius-29 .u-background-effect,
-.u-border-radius-29 > .u-container-layout {
+.u-radius-29,
+.u-radius-29:before,
+.u-radius-29 .u-background-effect,
+.u-radius-29 > .u-container-layout {
   border-radius: 29px !important;
 }
-.u-border-radius-30,
-.u-border-radius-30:before,
-.u-border-radius-30 .u-background-effect,
-.u-border-radius-30 > .u-container-layout {
+.u-radius-30,
+.u-radius-30:before,
+.u-radius-30 .u-background-effect,
+.u-radius-30 > .u-container-layout {
   border-radius: 30px !important;
 }
-.u-border-radius-31,
-.u-border-radius-31:before,
-.u-border-radius-31 .u-background-effect,
-.u-border-radius-31 > .u-container-layout {
+.u-radius-31,
+.u-radius-31:before,
+.u-radius-31 .u-background-effect,
+.u-radius-31 > .u-container-layout {
   border-radius: 31px !important;
 }
-.u-border-radius-32,
-.u-border-radius-32:before,
-.u-border-radius-32 .u-background-effect,
-.u-border-radius-32 > .u-container-layout {
+.u-radius-32,
+.u-radius-32:before,
+.u-radius-32 .u-background-effect,
+.u-radius-32 > .u-container-layout {
   border-radius: 32px !important;
 }
-.u-border-radius-33,
-.u-border-radius-33:before,
-.u-border-radius-33 .u-background-effect,
-.u-border-radius-33 > .u-container-layout {
+.u-radius-33,
+.u-radius-33:before,
+.u-radius-33 .u-background-effect,
+.u-radius-33 > .u-container-layout {
   border-radius: 33px !important;
 }
-.u-border-radius-34,
-.u-border-radius-34:before,
-.u-border-radius-34 .u-background-effect,
-.u-border-radius-34 > .u-container-layout {
+.u-radius-34,
+.u-radius-34:before,
+.u-radius-34 .u-background-effect,
+.u-radius-34 > .u-container-layout {
   border-radius: 34px !important;
 }
-.u-border-radius-35,
-.u-border-radius-35:before,
-.u-border-radius-35 .u-background-effect,
-.u-border-radius-35 > .u-container-layout {
+.u-radius-35,
+.u-radius-35:before,
+.u-radius-35 .u-background-effect,
+.u-radius-35 > .u-container-layout {
   border-radius: 35px !important;
 }
-.u-border-radius-36,
-.u-border-radius-36:before,
-.u-border-radius-36 .u-background-effect,
-.u-border-radius-36 > .u-container-layout {
+.u-radius-36,
+.u-radius-36:before,
+.u-radius-36 .u-background-effect,
+.u-radius-36 > .u-container-layout {
   border-radius: 36px !important;
 }
-.u-border-radius-37,
-.u-border-radius-37:before,
-.u-border-radius-37 .u-background-effect,
-.u-border-radius-37 > .u-container-layout {
+.u-radius-37,
+.u-radius-37:before,
+.u-radius-37 .u-background-effect,
+.u-radius-37 > .u-container-layout {
   border-radius: 37px !important;
 }
-.u-border-radius-38,
-.u-border-radius-38:before,
-.u-border-radius-38 .u-background-effect,
-.u-border-radius-38 > .u-container-layout {
+.u-radius-38,
+.u-radius-38:before,
+.u-radius-38 .u-background-effect,
+.u-radius-38 > .u-container-layout {
   border-radius: 38px !important;
 }
-.u-border-radius-39,
-.u-border-radius-39:before,
-.u-border-radius-39 .u-background-effect,
-.u-border-radius-39 > .u-container-layout {
+.u-radius-39,
+.u-radius-39:before,
+.u-radius-39 .u-background-effect,
+.u-radius-39 > .u-container-layout {
   border-radius: 39px !important;
 }
-.u-border-radius-40,
-.u-border-radius-40:before,
-.u-border-radius-40 .u-background-effect,
-.u-border-radius-40 > .u-container-layout {
+.u-radius-40,
+.u-radius-40:before,
+.u-radius-40 .u-background-effect,
+.u-radius-40 > .u-container-layout {
   border-radius: 40px !important;
 }
-.u-border-radius-41,
-.u-border-radius-41:before,
-.u-border-radius-41 .u-background-effect,
-.u-border-radius-41 > .u-container-layout {
+.u-radius-41,
+.u-radius-41:before,
+.u-radius-41 .u-background-effect,
+.u-radius-41 > .u-container-layout {
   border-radius: 41px !important;
 }
-.u-border-radius-42,
-.u-border-radius-42:before,
-.u-border-radius-42 .u-background-effect,
-.u-border-radius-42 > .u-container-layout {
+.u-radius-42,
+.u-radius-42:before,
+.u-radius-42 .u-background-effect,
+.u-radius-42 > .u-container-layout {
   border-radius: 42px !important;
 }
-.u-border-radius-43,
-.u-border-radius-43:before,
-.u-border-radius-43 .u-background-effect,
-.u-border-radius-43 > .u-container-layout {
+.u-radius-43,
+.u-radius-43:before,
+.u-radius-43 .u-background-effect,
+.u-radius-43 > .u-container-layout {
   border-radius: 43px !important;
 }
-.u-border-radius-44,
-.u-border-radius-44:before,
-.u-border-radius-44 .u-background-effect,
-.u-border-radius-44 > .u-container-layout {
+.u-radius-44,
+.u-radius-44:before,
+.u-radius-44 .u-background-effect,
+.u-radius-44 > .u-container-layout {
   border-radius: 44px !important;
 }
-.u-border-radius-45,
-.u-border-radius-45:before,
-.u-border-radius-45 .u-background-effect,
-.u-border-radius-45 > .u-container-layout {
+.u-radius-45,
+.u-radius-45:before,
+.u-radius-45 .u-background-effect,
+.u-radius-45 > .u-container-layout {
   border-radius: 45px !important;
 }
-.u-border-radius-46,
-.u-border-radius-46:before,
-.u-border-radius-46 .u-background-effect,
-.u-border-radius-46 > .u-container-layout {
+.u-radius-46,
+.u-radius-46:before,
+.u-radius-46 .u-background-effect,
+.u-radius-46 > .u-container-layout {
   border-radius: 46px !important;
 }
-.u-border-radius-47,
-.u-border-radius-47:before,
-.u-border-radius-47 .u-background-effect,
-.u-border-radius-47 > .u-container-layout {
+.u-radius-47,
+.u-radius-47:before,
+.u-radius-47 .u-background-effect,
+.u-radius-47 > .u-container-layout {
   border-radius: 47px !important;
 }
-.u-border-radius-48,
-.u-border-radius-48:before,
-.u-border-radius-48 .u-background-effect,
-.u-border-radius-48 > .u-container-layout {
+.u-radius-48,
+.u-radius-48:before,
+.u-radius-48 .u-background-effect,
+.u-radius-48 > .u-container-layout {
   border-radius: 48px !important;
 }
-.u-border-radius-49,
-.u-border-radius-49:before,
-.u-border-radius-49 .u-background-effect,
-.u-border-radius-49 > .u-container-layout {
+.u-radius-49,
+.u-radius-49:before,
+.u-radius-49 .u-background-effect,
+.u-radius-49 > .u-container-layout {
   border-radius: 49px !important;
 }
-.u-border-radius-50,
-.u-border-radius-50:before,
-.u-border-radius-50 .u-background-effect,
-.u-border-radius-50 > .u-container-layout {
+.u-radius-50,
+.u-radius-50:before,
+.u-radius-50 .u-background-effect,
+.u-radius-50 > .u-container-layout {
   border-radius: 50px !important;
 }
 /*begin-variables font-family*/
@@ -29882,7 +29906,6 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 /*end-variables colors*/
 
-/*# sourceMappingURL=nicepage.css.map*/
 /*begin-variables sitestylecss*/
 
 
@@ -30112,32 +30135,28 @@ a.u-link.u-text-hover-grey-90:hover {
 
 /*end-variables sitestylecss*/
  .u-header {background-image: none}
-.u-header .u-sheet-1 {min-height: 77px}
-.u-header .u-menu-1 {margin: 24px 17px 0 auto}
-.u-header .u-nav-1 {font-size: 1rem}
+.u-header .u-sheet-1 {min-height: 73px}
+.u-header .u-menu-1 {margin: 20px 52px 0 auto}
+.u-header .u-nav-1 {font-size: 1rem; letter-spacing: 0; font-weight: 700; text-transform: uppercase}
 .u-header .u-nav-2 {font-size: 1rem}
-.u-header .u-text-1 {margin: -36px 815px 17px 24px} 
+.u-header .u-text-1 {background-image: none; margin: -32px 815px 13px 24px} 
 @media (max-width: 1199px){ .u-header .u-sheet-1 {min-height: 79px}
 .u-header .u-menu-1 {width: 178px; margin-top: 21px; margin-right: 0}
-.u-header .u-text-1 {width: auto; margin-top: -34px; margin-right: 665px; margin-bottom: 21px} }
-@media (max-width: 991px){ .u-header .u-sheet-1 {min-height: 79px}
-.u-header .u-menu-1 {width: auto; margin-top: 24px}
-.u-header .u-text-1 {margin-top: -34px; margin-right: 404px; margin-bottom: 22px} }
-@media (max-width: 767px){ .u-header .u-text-1 {margin: -36px 141px 24px 20px} }
+.u-header .u-text-1 {width: auto; margin-top: -34px; margin-right: 665px; margin-bottom: 34px} }
+@media (max-width: 991px){ .u-header .u-sheet-1 {min-height: 83px}
+.u-header .u-menu-1 {width: auto; margin-top: 24px; margin-right: 11px}
+.u-header .u-text-1 {margin-top: -34px; margin-right: 404px; margin-bottom: 35px} }
+@media (max-width: 767px){ .u-header .u-menu-1 {margin-right: 0}
+.u-header .u-text-1 {margin: -32px 141px 37px 20px} }
 @media (max-width: 575px){ .u-header .u-sheet-1 {min-height: 75px}
-.u-header .u-text-1 {margin-right: 123px; margin-bottom: 20px; margin-left: 13px} }
- .u-footer .u-sheet-1 {min-height: 133px}
-.u-footer .u-group-1 {min-height: 63px; width: 570px; margin: 35px auto}
-.u-footer .u-container-layout-1 {padding-left: 60px; padding-right: 60px}
-.u-footer .u-text-1 {margin: 5px 0} 
-@media (max-width: 1199px){ .u-footer .u-group-1 {width: 470px}
-.u-footer .u-container-layout-1 {padding-left: 49px; padding-right: 49px} }
-@media (max-width: 991px){ .u-footer .u-group-1 {width: 360px}
-.u-footer .u-container-layout-1 {padding-left: 38px; padding-right: 38px} }
-@media (max-width: 767px){ .u-footer .u-group-1 {width: 338px}
-.u-footer .u-container-layout-1 {padding-left: 28px; padding-right: 28px} }
-@media (max-width: 575px){ .u-footer .u-group-1 {width: 283px}
-.u-footer .u-container-layout-1 {padding-left: 18px; padding-right: 18px} }
+.u-header .u-text-1 {margin-right: 123px; margin-bottom: 33px; margin-left: 13px} }
+ .u-footer .u-sheet-1 {min-height: 120px}
+.u-footer .u-text-1 {width: 631px; margin: 10px auto 8px} 
+
+
+@media (max-width: 767px){ .u-footer .u-sheet-1 {min-height: 200px}
+.u-footer .u-text-1 {width: 540px; margin-left: 0; margin-right: 0} }
+@media (max-width: 575px){ .u-footer .u-text-1 {width: 340px} }
 
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
