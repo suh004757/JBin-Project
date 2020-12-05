@@ -1,4 +1,4 @@
-.u-section-1 {background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/262825046-01.jpeg"); background-position: 50% 50%}
+.u-section-1 {background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/262825046-01.jpeg"); background-position: 50% 50%}
 .u-section-1 .u-sheet-1 {min-height: 663px}
 .u-section-1 .u-text-1 {animation-duration: 1000ms; margin: 133px 577px 0 0}
 .u-section-1 .u-layout-wrap-1 {margin: 60px auto 0 0}
@@ -168,7 +168,7 @@
 .u-section-7 .u-text-2 {margin: 37px -40px 0 0}
 .u-section-7 .u-btn-1 {border-style: none none solid; margin: -86px auto 0 0; padding: 0}
 .u-section-7 .u-btn-2 {border-style: none none solid; font-size: 0.875rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin: 20px auto 0 0; padding: 0}
-.u-section-7 .u-image-1 {background-image: url("images/262825046-02.jpeg"); min-height: 626px; background-position: 50% 50%} 
+.u-section-7 .u-image-1 {background-image: url("../images/262825046-02.jpeg"); min-height: 626px; background-position: 50% 50%} 
 
 @media (max-width: 1199px){ .u-section-7 .u-layout-wrap-1 {margin-right: initial; margin-left: initial}
 .u-section-7 .u-container-layout-1 {padding-left: 96px; padding-right: 63px}
@@ -194,13 +194,13 @@
 .u-section-7 .u-image-1 {min-height: 504px} }.u-section-8 .u-sheet-1 {min-height: 379px}
 .u-section-8 .u-text-1 {width: 679px; margin: 64px auto 0}
 .u-section-8 .u-list-1 {min-height: 188px; grid-template-columns: calc(25% - 8px) calc(25% - 8px) calc(25% - 8px) calc(25% - 8px); grid-template-rows: auto; grid-gap: 10px 10px; width: 1193px; margin: 20px -26px 60px}
-.u-section-8 .u-image-1 {background-image: url("images/hackerone-seeklogo.com.svg")}
+.u-section-8 .u-image-1 {background-image: url("../images/hackerone-seeklogo.com.svg")}
 .u-section-8 .u-container-layout-1 {padding: 25px 0 30px}
-.u-section-8 .u-image-2 {background-image: url("images/1.png"); background-position: 50% 50%}
+.u-section-8 .u-image-2 {background-image: url("../images/1.png"); background-position: 50% 50%}
 .u-section-8 .u-container-layout-2 {padding: 25px 0 30px}
-.u-section-8 .u-image-3 {background-image: url("images/getronics-seeklogo.com.svg")}
+.u-section-8 .u-image-3 {background-image: url("../images/getronics-seeklogo.com.svg")}
 .u-section-8 .u-container-layout-3 {padding: 25px 0 30px}
-.u-section-8 .u-image-4 {background-image: url("images/offensivesecurity.png")}
+.u-section-8 .u-image-4 {background-image: url("../images/offensivesecurity.png")}
 .u-section-8 .u-container-layout-4 {padding: 25px 0 30px} 
 
 @media (max-width: 1199px){ .u-section-8 .u-sheet-1 {min-height: 346px}
