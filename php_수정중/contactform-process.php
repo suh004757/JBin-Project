@@ -26,7 +26,7 @@ if (empty($_POST["terms"])) {
     $terms = $_POST["terms"];
 }
 
-$EmailTo = "yourname@domain.com";
+$EmailTo = "admin@jbinproject.online";
 $Subject = "JBin Project 사이트 문의";
 
 // 이메일 본문
