@@ -1,0 +1,483 @@
+/* ============================================
+   JBIN PROJECT - LAYOUT SYSTEM
+   Grid, flexbox, and responsive utilities
+   ============================================ */
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+.container-fluid {
+    width: 100%;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+.container-narrow {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+/* ============================================
+   SECTION SPACING
+   ============================================ */
+
+.section {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+}
+
+.section-sm {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+}
+
+.section-lg {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+}
+
+/* ============================================
+   FLEXBOX UTILITIES
+   ============================================ */
+
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+/* Flex Direction */
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-col-reverse {
+    flex-direction: column-reverse;
+}
+
+/* Flex Wrap */
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+/* Justify Content */
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+/* Align Items */
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-baseline {
+    align-items: baseline;
+}
+
+.items-stretch {
+    align-items: stretch;
+}
+
+/* Align Self */
+.self-start {
+    align-self: flex-start;
+}
+
+.self-end {
+    align-self: flex-end;
+}
+
+.self-center {
+    align-self: center;
+}
+
+.self-stretch {
+    align-self: stretch;
+}
+
+/* Flex Grow/Shrink */
+.flex-1 {
+    flex: 1 1 0%;
+}
+
+.flex-auto {
+    flex: 1 1 auto;
+}
+
+.flex-initial {
+    flex: 0 1 auto;
+}
+
+.flex-none {
+    flex: none;
+}
+
+/* Gap */
+.gap-1 {
+    gap: var(--space-1);
+}
+
+.gap-2 {
+    gap: var(--space-2);
+}
+
+.gap-3 {
+    gap: var(--space-3);
+}
+
+.gap-4 {
+    gap: var(--space-4);
+}
+
+.gap-6 {
+    gap: var(--space-6);
+}
+
+.gap-8 {
+    gap: var(--space-8);
+}
+
+/* ============================================
+   GRID UTILITIES
+   ============================================ */
+
+.grid {
+    display: grid;
+}
+
+/* Grid Columns */
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+/* Grid Rows */
+.grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+/* Grid Column Span */
+.col-span-1 {
+    grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+    grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+    grid-column: span 3 / span 3;
+}
+
+.col-span-4 {
+    grid-column: span 4 / span 4;
+}
+
+.col-span-6 {
+    grid-column: span 6 / span 6;
+}
+
+.col-span-full {
+    grid-column: 1 / -1;
+}
+
+/* ============================================
+   COMMON LAYOUTS
+   ============================================ */
+
+/* Two Column Layout */
+.two-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+}
+
+/* Three Column Layout */
+.three-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+/* Four Column Layout */
+.four-column {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+}
+
+/* Card Grid (responsive) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-6);
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+
+/* Mobile First Approach */
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:flex-row {
+        flex-direction: row;
+    }
+
+    .md\:hidden {
+        display: none;
+    }
+
+    .md\:block {
+        display: block;
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .lg\:flex-row {
+        flex-direction: row;
+    }
+}
+
+/* Large Desktop (1280px and up) */
+@media (min-width: 1280px) {
+    .xl\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Mobile-specific utilities */
+@media (max-width: 767px) {
+    .mobile-hidden {
+        display: none;
+    }
+
+    .mobile-block {
+        display: block;
+    }
+
+    .two-column,
+    .three-column,
+    .four-column {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .section {
+        padding-top: var(--space-8);
+        padding-bottom: var(--space-8);
+    }
+
+    .section-lg {
+        padding-top: var(--space-10);
+        padding-bottom: var(--space-10);
+    }
+}
+
+/* ============================================
+   POSITIONING
+   ============================================ */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.sticky {
+    position: sticky;
+}
+
+/* Common positioning patterns */
+.center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ============================================
+   WIDTH & HEIGHT
+   ============================================ */
+
+.w-full {
+    width: 100%;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.w-screen {
+    width: 100vw;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+/* ============================================
+   OVERFLOW
+   ============================================ */
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+/* ============================================
+   VISIBILITY
+   ============================================ */
+
+.visible {
+    visibility: visible;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/* ============================================
+   ASPECT RATIO
+   ============================================ */
+
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+    aspect-ratio: 16 / 9;
+}
+
+.aspect-portrait {
+    aspect-ratio: 3 / 4;
+}

@@ -1,982 +1,494 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="JBin for Global IT services Security & Development & Field engineering">
-    <meta name="author" content="JBin Project">
-    <meta name="keywords" content="jbin,JBin,lobal,development,개발,보안,프로젝트,jbin프로젝트,제이빈프로젝트,JBinproject,IT,Freelancer,Project,JBin Projecgt,IT관련,웹개발,앱개발 ,풀스택,프리랜서">
-    <!-- OG Meta Tags  -->
-    <meta property="og:site_name" content="JBin Project" /> 
-	<meta property="og:site" content="https://jbinproject.online" /> 
-	<meta property="og:title" content="JBin Project"/> 
-	<meta property="og:description" content="JBin for Global IT services Security & Development & Field engineering" /> 
-	<meta property="og:image" content="images/jbin logo.jpg" /> 
-	<meta property="og:url" content="index.html" />
-	<meta property="og:type" content="article" />
-    <link rel="canonical" href="index.html">
- 
- 
-       <!--- Analystics -->
-        <meta name="naver-site-verification" content="55e1498687c4101688b99e9d069315fa769a93e5" />
-        <meta name="naver-site-verification" content="c984283dff20b2a6fb39f35e3b1d6db6ff940b5b" />
-        <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
-<script type="text/javascript">
-if(!wcs_add) var wcs_add = {};
-wcs_add["wa"] = "5a5516e0135fc8";
-if(window.wcs) {
-wcs_do();
-}
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="JBIN Project - Small boutique IT infrastructure firm delivering end-to-end infrastructure globally, enhanced with AI research capability.">
+  <meta name="keywords"
+    content="infrastructure delivery, datacenter, network infrastructure, AI-enhanced infrastructure, medical AI, enterprise IT, global projects">
+  <meta name="author" content="JBIN Project">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179785116-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-179785116-1');
-    </script>
-    </script>
+  <title>JBIN Project - Infrastructure Delivered. Globally.</title>
 
-    <title>JBin Project-IT Service Provider for global</title>
-    
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
 
-	<!-- Favicon  -->
-    <link rel="icon" href="images/jbin logo.jpg">
+  <style>
+    /* Page-specific styles */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: var(--space-3);
+    }
+
+    .dark-section {
+      background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-charcoal-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dark-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+  </style>
 </head>
-<body data-spy="scroll" data-target=".fixed-top">
-    
-    <!-- Preloader -->
-	<div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
+
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <span style="color: var(--color-accent);">JBIN</span> PROJECT
+      </a>
+
+      <button class="navbar-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="services.html" class="navbar-link">Services</a></li>
+        <li><a href="projects.html" class="navbar-link">Projects</a></li>
+        <li><a href="team.html" class="navbar-link">Team</a></li>
+        <li><a href="research.html" class="navbar-link">Research</a></li>
+        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+        <!-- Language toggle removed for English-only site -->
+      </ul>
     </div>
-    <!-- end of preloader -->
-    
+  </nav>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-   
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero">
+    <img
+      src="C:/Users/tjwns/.gemini/antigravity/brain/21516891-e14f-4a3e-bc69-6cab543e1603/datacenter_hero_background_1765884992244.png"
+      alt="Datacenter Infrastructure" class="hero-background">
+    <div class="hero-overlay"></div>
 
-        <!-- TEXTLogo -->
-        <a class="navbar-brand logo-text page-scroll" href="KR.html">JBin Project </a>
-        
-        <!--모바일 메뉴 토글 -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-awesome fas fa-bars"></span>
-            <span class="navbar-toggler-awesome fas fa-times"></span>
-        </button>
-        
+    <div class="hero-content">
+      <h1 class="hero-title">JBIN PROJECT</h1>
+      <p class="hero-subtitle">Infrastructure Delivered. Globally.<br>(Getting Smarter With AI)</p>
+      <p class="hero-tagline">Small Team, Big Projects, Direct Delivery</p>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#intro">Intro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#callMe">Join</a>
-                </li>
-              <!--추가중  <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#projects">PROJECTS</a>
-                </li>-->
+      <div class="hero-cta">
+        <a href="projects.html" class="btn btn-primary btn-lg">Our Work</a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
+      </div>
 
-             
+      <p class="hero-meta">Seoul 🇰🇷 | Tokyo 🇯🇵 | Global Projects</p>
+    </div>
+  </section>
 
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">Contact</a>
-                </li>
+  <!-- ============================================
+       WHAT WE DO
+       ============================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="three-column fade-in">
 
-                   <!-- Dropdown Menu -->          
-                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll"  id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Languages</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="KR.html"><span class="item-text">한국어</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="#"><span class="item-text">Japanese</span></a>
-                    </div>
-                </li>
-                <!-- end dropdown -->
-            </ul>
-            <span class="nav-item social-icons">
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <span class="hexagon"></span>
-                        <i class="fab fa-facebook-f fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <span class="hexagon"></span>
-                        <i class="fab fa-twitter fa-stack-1x"></i>
-                    </a>
-                </span>
-            </span>
+        <!-- Infrastructure Delivery -->
+        <div class="card">
+          <div class="service-icon">🏗️</div>
+          <h3>Infrastructure Delivery</h3>
+          <p>End-to-end infrastructure deployment for global enterprises.</p>
+          <p class="text-muted">Datacenters • Networks • Enterprise IT</p>
+          <a href="services.html#infrastructure" class="btn btn-ghost" style="margin-top: var(--space-3);">Learn More
+            →</a>
         </div>
-    </nav>
-    <!-- end of navbar -->
 
+        <!-- AI-Enhanced Infrastructure -->
+        <div class="card card-highlight">
+          <div class="service-icon">🤖</div>
+          <h3>AI-Enhanced Infrastructure</h3>
+          <p>Unlike typical infrastructure shops, we bring AI research capability.</p>
+          <p class="text-muted">Cost modeling • Predictive maintenance • Optimization</p>
+          <a href="services.html#ai-enhanced" class="btn btn-ghost" style="margin-top: var(--space-3);">Our Approach
+            →</a>
+        </div>
 
-    <!-- Header -->
-    <header id="header" class="header">
-        <div class="header-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-container">
-                            <h1> <span id="js-rotating">JBin Project has Great Partners,JBin Project has Great Engineers,JBin Project has Great Clients </span></h1> <!--script.js 에 정의-->
-                            <p class="p-heading p-large">We are doing  Global IT services with Highly Passionate Engineers</p>
-                            <a class="btn-solid-lg page-scroll" href="./companyoverview(EN).pdf">Company Profile</a> <!--style.css참조-->
-                        </div>
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of header-content -->
-    </header> <!-- end of header -->
-    <!-- end of header -->
+        <!-- Medical AI -->
+        <div class="card">
+          <div class="service-icon">🏥</div>
+          <h3>Medical AI (Emerging)</h3>
+          <p>Expanding into medical AI transformation.</p>
+          <p class="text-muted">Early stage, seeking partners.</p>
+          <a href="services.html#medical-ai" class="btn btn-ghost" style="margin-top: var(--space-3);">Explore →</a>
+        </div>
 
+      </div>
+    </div>
+  </section>
 
-    <!-- Intro -->
-    <div id="intro" class="basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="text-container">
-                        <div class="section-title">INTRO</div>
-                        <h2></h2>
-                        <p>JBin Project is providing IT Global Projects  </p>
-                        <p class="testimonial-text">"We want to launch the next generation of global IT service platforms for future IT service providers and users"</p>
-                        <div class="testimonial-author">Joonhyuk Suh - Co Founder</div>
-                        <br>
-                        <p class="testimonial-text">"We think it is better to pioneer the path to better solutions rather than follow the trends of others"</p>
-                        <div class="testimonial-author"> Haebin Seong - Co Founder</div>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-7">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/intro-office.jpg" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of intro -->
+  <!-- ============================================
+       WHY CHOOSE US
+       ============================================ -->
+  <section class="section" style="background-color: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Why Choose Us</h2>
+      </div>
 
+      <div class="two-column fade-in">
 
-    <!-- Description -->
-    <div class="cards-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Card -->
-                    <div class="card">
-                        <span class="fa-stack">
-                            <span class="hexagon"></span>
-                            <i class="fas fa-binoculars fa-stack-1x"></i>
-                        </span>
-                        <div class="card-body">
-                            <h4 class="card-title">Environment Analysis </h4>
-                            <p>We provide a detailed analysis on the kinds of business being conducted at the environments in which our clients demand </p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
+        <!-- Small Team, Direct Delivery -->
+        <div>
+          <h3 style="color: var(--color-accent); margin-bottom: var(--space-3);">Small Team, Direct Delivery</h3>
+          <ul style="list-style: none; padding: 0; line-height: var(--leading-loose);">
+            <li style="margin-bottom: var(--space-2);">✓ 3 core members - no layers, no subcontractors</li>
+            <li style="margin-bottom: var(--space-2);">✓ Hands-on founders on every project</li>
+            <li style="margin-bottom: var(--space-2);">✓ Direct communication, fast decisions</li>
+            <li style="margin-bottom: var(--space-2);">✓ Global project experience (Korea-Japan-Global)</li>
+            <li style="margin-bottom: var(--space-2);">✓ Diverse industry expertise</li>
+          </ul>
+        </div>
 
-                    <!-- Card -->
-                    <div class="card">
-                        <span class="fa-stack">
-                            <span class="hexagon"></span>
-                            <i class="fas fa-list-alt fa-stack-1x"></i>
-                        </span>
-                        <div class="card-body">
-                            <h4 class="card-title">Development Planning</h4>
-                            <p>Based on research, we review our client’s development plans and designs in order to help draw the project’s path to success</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
+        <!-- Technical + Practical -->
+        <div>
+          <h3 style="color: var(--color-accent); margin-bottom: var(--space-3);">Technical + Practical</h3>
+          <ul style="list-style: none; padding: 0; line-height: var(--leading-loose);">
+            <li style="margin-bottom: var(--space-2);">✓ 15+ years infrastructure experience</li>
+            <li style="margin-bottom: var(--space-2);">✓ AI research capability (ICLR, NeurIPS, ICRA)</li>
+            <li style="margin-bottom: var(--space-2);">✓ We ship working systems, not PowerPoints</li>
+            <li style="margin-bottom: var(--space-2);">✓ On-site when needed, remote-capable always</li>
+            <li style="margin-bottom: var(--space-2);">✓ Research-backed, reality-tested</li>
+          </ul>
+        </div>
 
-                    <!-- Card -->
-                    <div class="card">
-                        <span class="fa-stack">
-                            <span class="hexagon"></span>
-                            <i class="fas fa-chart-pie fa-stack-1x"></i>
-                        </span>
-                        <div class="card-body">
-                            <h4 class="card-title">Risk Management</h4>
-                            <p>During the performance phase, we provide analysis and prevention of possible high-risk incidents</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
+      </div>
+    </div>
+  </section>
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-1 -->
-    <!-- end of description -->
+  <!-- ============================================
+       RECENT WORK
+       ============================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Recent Work</h2>
+        <p class="section-subtitle">Selected projects across infrastructure delivery and AI innovation</p>
+      </div>
 
+      <div class="three-column fade-in">
 
-    <!-- Services -->
-    <div id="services" class="cards-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">Services</div>
-                    <h2>IT Services  </h2>
-                    <p class="p-heading">Other types of IT requests are also available </p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                   <!-- Card -->
-                   <div class="card">
-                    <div class="card-image">
-                        <img class="img-fluid" src="images/services-1.jpg" alt="alternative">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Hacking & Security </h3>
-                        <p> Global Experts with experience in international competitions and hacking into various platforms   </p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Penetration Testing </div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"> Security Consulting </div>
-                            </li>
+        <!-- Project 1 -->
+        <div class="card">
+          <div class="card-header">
+            <span class="badge badge-accent">Active Development</span>
+            <h3 class="card-title" style="margin-top: var(--space-2);">Real Estate Platform Infrastructure</h3>
+            <p class="card-subtitle">Real Estate</p>
+          </div>
+          <div class="card-body">
+            <ul style="list-style: none; padding: 0; color: var(--color-text-secondary);">
+              <li style="margin-bottom: var(--space-1);">• Client: Major Korean real estate company</li>
+              <li style="margin-bottom: var(--space-1);">• Scope: Full-stack platform + infrastructure</li>
+              <li style="margin-bottom: var(--space-1);">• Tech: Modern web stack, cloud infrastructure</li>
+              <li style="margin-bottom: var(--space-1);">• Status: Active development</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge badge-nda">Case details under NDA</span>
+          </div>
+        </div>
 
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"> Malware Analysis and Digital Forensic </div>
-                            </li>
-                        </ul>
-                    </ul>
-                        <p class="price">Further inquiries available </span></p>
-                    </div>
-                   
-                </div>
-                <!-- end of card -->
+        <!-- Project 2 -->
+        <div class="card">
+          <div class="card-header">
+            <span class="badge">Enterprise</span>
+            <h3 class="card-title" style="margin-top: var(--space-2);">Global Infrastructure Deployment</h3>
+            <p class="card-subtitle">Enterprise/Manufacturing</p>
+          </div>
+          <div class="card-body">
+            <ul style="list-style: none; padding: 0; color: var(--color-text-secondary);">
+              <li style="margin-bottom: var(--space-1);">• Sector: Enterprise/Manufacturing</li>
+              <li style="margin-bottom: var(--space-1);">• Scope: Multi-site infrastructure</li>
+              <li style="margin-bottom: var(--space-1);">• Challenge: Cross-border coordination</li>
+              <li style="margin-bottom: var(--space-1);">• Scale: International</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge badge-nda">Details available on request</span>
+          </div>
+        </div>
 
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-image">
-                        <img class="img-fluid" src="images/services-2.jpg" alt="alternative">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Development</h3>
-                        <p>Customized Development Service based on the requests </p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Pricing is based on the scope of development and technology being utilized</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Consultation is provided regardless of scope</div>
-                            </li>
+        <!-- Project 3 -->
+        <div class="card card-highlight">
+          <div class="card-header">
+            <span class="badge badge-accent">AI Pilot</span>
+            <h3 class="card-title" style="margin-top: var(--space-2);">AI-Enhanced Operations</h3>
+            <p class="card-subtitle">Innovation</p>
+          </div>
+          <div class="card-body">
+            <ul style="list-style: none; padding: 0; color: var(--color-text-secondary);">
+              <li style="margin-bottom: var(--space-1);">• Innovation: Applied cost modeling research</li>
+              <li style="margin-bottom: var(--space-1);">• Scope: Predictive maintenance + optimization</li>
+              <li style="margin-bottom: var(--space-1);">• Status: Early deployment</li>
+              <li style="margin-bottom: var(--space-1);">• Result: Performance improvement</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge badge-nda">More details under NDA</span>
+          </div>
+        </div>
 
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Full Stack Development </div>
-                            </li>
-                        </ul>
-                        <p class="price">Further inquiries available </span></p>
-                    </div>
-                  
-                </div>
-                <!-- end of card -->
+      </div>
 
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-image">
-                        <img class="img-fluid" src="images/services-3.jpg" alt="alternative">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">IT Infrastructure </h3>
-                        <p>On premise Support & Cloud Support</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Field Service & Datacenter Support</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"> IT Infrastruture Consult & Design & Deployment </div>
-                            </li>
+      <div class="text-center" style="margin-top: var(--space-6);">
+        <a href="projects.html" class="btn btn-primary">More Projects - Inquire Directly</a>
+      </div>
+    </div>
+  </section>
 
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Network & Server Maintenance</div>
-                            </li>
-                        </ul>
-                        <p class="price">Further inquiries available</span></p>
-                    </div>
-                  
+  <!-- ============================================
+       TEAM PREVIEW
+       ============================================ -->
+  <section class="section" style="background-color: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Meet the Team</h2>
+        <p class="section-subtitle">Small team. Global reach. Direct delivery.</p>
+      </div>
 
-                 <!--   <div class="button-container">
-                        <a class="btn-solid-reg page-scroll" href="#contact">견적받기</a>
-                    </div>  end of button-container 버튼을 쓸까 말까-->
-                </div>
-                    <!-- end of card -->
+      <div class="three-column fade-in">
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-2 -->
-    <!-- end of services -->
-    
+        <!-- Jun -->
+        <div class="card text-center">
+          <img
+            src="C:/Users/tjwns/.gemini/antigravity/brain/21516891-e14f-4a3e-bc69-6cab543e1603/team_jun_profile_1765885008587.png"
+            alt="Jun (Joonhyuk Seo)"
+            style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto var(--space-3); object-fit: cover; border: 3px solid var(--color-accent);">
+          <h4>Jun (Joonhyuk Seo)</h4>
+          <p class="text-accent font-semibold">Founder</p>
+          <p class="text-muted" style="font-size: var(--text-sm);">Infrastructure architect • 15+ years enterprise IT
+          </p>
+          <div style="margin-top: var(--space-3);">
+            <a href="#" class="text-accent" style="font-size: var(--text-xl);">in</a>
+          </div>
+        </div>
 
-    <!-- Details 1 -->
-	<div id="details" class="accordion">
-		<div class="area-1">
-		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
-            
-            <!-- Accordion -->
-            <div class="accordion-container" id="accordionOne">
-                <h2>JBin Project is expanding business with global companies</h2>
-                <div class="item">
-                    <div id="headingOne">
-                        <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" role="button">
-                            <span class="circle-numbering">1</span><span class="accordion-title">Why choose JBin Project?</span>
-                        </span>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            Our partners consist of highly valued companies with quality infrastructure and history. 
-                            We strengthen our expertise through collaboration with the world’s leading experts for each service.
-                        </div>
-                    </div>
-                </div> <!-- end of item -->
-            
-                <div class="item">
-                    <div id="headingTwo">
-                        <span class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" role="button">
-                            <span class="circle-numbering">2</span><span class="accordion-title">Our Previous Experiences</span>
-                        </span>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            Some of our previous clients have a wide variety of business models and infrastructures including NTT, IBM, Northern Trust, RedHat etc.
-                             Through the many project experiences we accumulated, 
-                             we have gained the ability to provide competent evaluations and problem diagnosis in an objective manner
-                        </div>
-                    </div>
-                </div> <!-- end of item -->
-            
-                <div class="item">
-                    <div id="headingThree">
-                        <span class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" role="button">
-                            <span class="circle-numbering">3</span><span class="accordion-title">Transparent Assessment of Cost</span>
-                        </span>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            For JBin Project, the success of the project comes first. We will not proceed with the project unless it is a “win-win” for both parties. 
-                            We will adjust the cost appropriately based on the budget and scope of the project.
-                        </div>
-                    </div>
-                </div> <!-- end of item -->
-            </div> <!-- end of accordion-container -->
-            <!-- end of accordion -->
+        <!-- Haebin -->
+        <div class="card text-center">
+          <img
+            src="C:/Users/tjwns/.gemini/antigravity/brain/21516891-e14f-4a3e-bc69-6cab543e1603/team_haebin_profile_1765885035754.png"
+            alt="Haebin Seong"
+            style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto var(--space-3); object-fit: cover; border: 3px solid var(--color-accent);">
+          <h4>Haebin Seong</h4>
+          <p class="text-accent font-semibold">Co-Founder / AI Research</p>
+          <p class="text-muted" style="font-size: var(--text-sm);">KAIST → Theori → Maum.AI<br>DEFCON Champion 2024 🏆
+          </p>
+          <div style="margin-top: var(--space-3); display: flex; gap: var(--space-2); justify-content: center;">
+            <a href="#" class="text-accent" style="font-size: var(--text-xl);">🌐</a>
+            <a href="#" class="text-accent" style="font-size: var(--text-xl);">🎓</a>
+          </div>
+        </div>
 
-		</div> <!-- end of area-2 -->
-    </div> <!-- end of accordion -->
-    <!-- end of details 1 -->
+        <!-- Yasin -->
+        <div class="card text-center">
+          <img
+            src="C:/Users/tjwns/.gemini/antigravity/brain/21516891-e14f-4a3e-bc69-6cab543e1603/team_yasin_profile_1765885071522.png"
+            alt="Yasin Gzabri"
+            style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto var(--space-3); object-fit: cover; border: 3px solid var(--color-accent);">
+          <h4>Yasin Gzabri</h4>
+          <p class="text-accent font-semibold">Senior Engineer</p>
+          <p class="text-muted" style="font-size: var(--text-sm);">DC operations • Global infrastructure</p>
+          <div style="margin-top: var(--space-3);">
+            <a href="#" class="text-accent" style="font-size: var(--text-xl);">in</a>
+          </div>
+        </div>
 
+      </div>
 
-    <!-- Details 2 -->
-	<div class="tabs">
-        <div class="area-1">
-            <div class="tabs-container">
-                
-                <!-- Tabs Links -->
-                <ul class="nav nav-tabs" id="ariaTabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-th"></i>Goal</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-th"></i>Promise</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-th"></i>Service</a>
-                    </li>
-                </ul>
-                <!-- end of tabs links -->
-                
-                <!-- Tabs Content -->
-                <div class="tab-content" id="ariaTabsContent">
+      <div class="text-center" style="margin-top: var(--space-6);">
+        <a href="team.html" class="btn btn-ghost">Meet the Team →</a>
+      </div>
+    </div>
+  </section>
 
-                    <!-- Tab -->
-                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
-                        <h4>Building Business Models and Platforms for Enterprises and IT Specialists</h4>
-                        <p>JBin Project provides services for both IT service providers and clients. 
-                            It will no longer be necessary to invest time and money into multiple different platforms, 
-                            communities and outsourcing companies just to find IT providers and clients.
-                        </p>
-                        
-                    </div> <!-- end of tab-pane --> 
-                    <!-- end of tab -->
+  <!-- ============================================
+       RESEARCH TO PRACTICE
+       ============================================ -->
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">We Publish Research. Then We Use It.</h2>
+        <p class="section-subtitle">Our team publishes at top AI conferences (ICLR, NeurIPS, ICRA).<br>We apply that
+          research to real infrastructure projects.</p>
+      </div>
 
-                    <!-- Tab -->
-                    <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
-                        <ul class="list-unstyled li-space-lg first">
-                            <li class="media">
-                                <div class="media-bullet">1</div>
-                                <div class="media-body">IT Specialists will directly examine the client’s request in an objective manner. </div>
-                            </li>
-                            <li class="media">
-                                <div class="media-bullet">2</div>
-                                <div class="media-body">Countermeasures against any risks to the project will be provided on a consistent basis.</div>
-                            </li>
-                            <li class="media">
-                                <div class="media-bullet">3</div>
-                                <div class="media-body">Any failed projects in the past will be used as a reference point for any similar projects to prevent such results.</div>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled li-space-lg last">
-                            <li class="media">
-                                <div class="media-bullet">4</div>
-                                <div class="media-body">In cases where we lack the proper resources for a project, we provide specialists externally as necessary.</div>
-                            </li>
-                            <li class="media">
-                                <div class="media-bullet">5</div>
-                                <div class="media-body"> During the evaluation phase of a project, we will be completely transparent and not conceal any details.</div>
-                            </li>
-                            <li class="media">
-                                <div class="media-bullet">6</div>
-                                <div class="media-body">All ethical standards and procedures will be met to the highest standard.</div>
-                            </li>
-                        </ul>
-                    </div> <!-- end of tab-pane -->
-                    <!-- end of tab -->
+      <div class="fade-in" style="max-width: 800px; margin: 0 auto var(--space-6);">
+        <h4 style="color: var(--color-accent); margin-bottom: var(--space-3);">Recent Publications:</h4>
+        <ul style="list-style: none; padding: 0; line-height: var(--leading-loose);">
+          <li style="margin-bottom: var(--space-2);">• Economic modeling for autonomous systems (2024)</li>
+          <li style="margin-bottom: var(--space-2);">• AI safety & guardrails (ICLR 2025)</li>
+          <li style="margin-bottom: var(--space-2);">• Vision-action learning frameworks</li>
+        </ul>
 
-                    <!-- Tab -->
-                    <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
-                        <p>There are no restrictions on the services that JBin Project is willing to provide</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Support for connecting clients and external specialists are also provided.</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">The same level of support is provided for both individuals and organizations.</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Services will also be provided in multiple languages.</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">The project will not commence until the request becomes clear and unambiguous.</div>
-                            </li>
-                      
-                      
-                        </ul>
-                    </div> <!-- end of tab-pane -->
-                    <!-- end of tab -->
+        <p
+          style="margin-top: var(--space-4); padding: var(--space-4); background-color: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--color-accent); border-radius: var(--border-radius-md);">
+          <strong>This means:</strong> Cost models backed by research, not guesses.<br>
+          Optimization approaches proven in papers.
+        </p>
+      </div>
 
-                </div> <!-- end of tab-content -->
-                <!-- end of tabs content -->
+      <div class="text-center fade-in">
+        <a href="research.html" class="btn btn-primary">View Publications</a>
+      </div>
+    </div>
+  </section>
 
-            </div> <!-- end of tabs-container -->
-        </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2"></div> <!-- end of area-2 -->
-    </div> <!-- end of tabs -->
-    <!-- end of details 2 -->
+  <!-- ============================================
+       CONTACT CTA
+       ============================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="container-narrow text-center fade-in">
+        <h2 class="section-title">Ready to Talk?</h2>
+        <p class="section-subtitle" style="margin-bottom: var(--space-6);">
+          Whether you need infrastructure delivered or want to explore<br>
+          AI-enhanced solutions, let's discuss your project.
+        </p>
 
+        <div class="card" style="text-align: left; max-width: 600px; margin: 0 auto;">
+          <form id="quick-contact-form">
+            <div class="form-group">
+              <label class="form-label form-label-required" for="quick-name">Name</label>
+              <input type="text" id="quick-name" class="form-input" required>
+            </div>
 
-    
-    <!-- Testimonials -->
-    <div class="slider">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Our Partners</h2>
-                    <p class="p-heading">Our partners are sharing projects and Enginnering Resources</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-               
-                    <!-- Card Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container card-slider">
-                            <div class="swiper-wrapper">
-                                
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image-top" src="images/testimonial-1.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-text">Global Datacenter & Projects Support</div>
-                                            <div class="testimonial-author"><a href="http://digitalsmarthands.com/" target=_blank>Digital Smarthands</a></div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image-top" src="images/testimonial-2.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-text">Global IT projects & Datacenter support  </div>
-                                            <div class="testimonial-author"><a href="https://www.orion247.com/" target=_blank>Orion247</a></div>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image-top" src="images/testimonial-3.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-text">Global IT Projects & Clients Support </div>
-                                            <div class="testimonial-author"><a href="https://www.getronics.com/" target=_blank>Getronics</a></div>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                 <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image-top" src="images/hackerone.png" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-text"> Security Penetration & Bugbounty Platform Support </div>
-                                            <div class="testimonial-author"><a href="https://www.hackerone.com/" target=_blank>Hackerone</a></div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image-top" src="images/testimonial-5.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-text">Security Penetration & Lab environment Support</div>
-                                            <div class="testimonial-author"><a href="https://www.offensive-security.com/" target=_blank>Offensive Security</a></div>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                            <!-- Slide -->
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <img class="card-image-top" src="images/paypal.jpg" alt="alternative">
-                                    <div class="card-body">
-                                        <div class="testimonial-text">Payment Support for Global Business </div>
-                                        <div class="testimonial-author"><a href="https://www.paypal.com/" target=_blank>Paypal</a></div>
-                                    </div>
-                                </div>        
-                            </div> <!-- end of swiper-slide -->
-                            <!-- end of slide -->
-    
-                                   <!-- Slide -->
-                                   <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image-top" src="images/payoneer.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-text">Payment Support for Global Business</div>
-                                            <div class="testimonial-author"><a href="https://www.payoneer.com/" target=_blank>Payoneer</a></div>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                            </div> <!-- end of swiper-wrapper -->
-        
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <!-- end of add arrows -->
-        
-                        </div> <!-- end of swiper-container -->
-                    </div> <!-- end of sliedr-container -->
-                    <!-- end of card slider -->
+            <div class="form-group">
+              <label class="form-label form-label-required" for="quick-email">Email</label>
+              <input type="email" id="quick-email" class="form-input" required>
+            </div>
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of slider -->
-    <!-- end of testimonials -->
+            <div class="form-group">
+              <label class="form-label" for="quick-company">Company</label>
+              <input type="text" id="quick-company" class="form-input">
+            </div>
 
-    <!-- Call Me -->
-    <div id="callMe" class="form-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <div class="section-title">Join Us</div>
-                        <h2 class="white"> Partnership & Team Join inquiries available</h2>
-                        <p class="white">JBin Project is currently recruiting partners and team members.  </p>
-                        <ul class="list-unstyled li-space-lg white">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">We welcome any confident developers, network engineers, designers, security experts etc.</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">New startup members and freelancers may also apply.</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Partners who want to collaborate with JBin Project are also welcome. </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                   
-                    <!-- Call Me Form 
-                    <form id="callMeForm" data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="lname" name="lname" required>
-                            <label class="label-control" for="lname">Name</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="lphone" name="lphone" required>
-                            <label class="label-control" for="lphone">Phone</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="lemail" name="lemail" required>
-                            <label class="label-control" for="lemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control-select" id="lselect" required>
-                                <option class="select-option" value="" disabled selected>Interested in...</option>
-                                <option class="select-option" value="Off The Ground">Off The Ground</option>
-                                <option class="select-option" value="Accelerated Growth">Accelerated Growth</option>
-                                <option class="select-option" value="Market Domination">Market Domination</option>
-                            </select>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox white">
-                            <input type="checkbox" id="lterms" value="Agreed-to-Terms" name="lterms" required>I agree with JBin Project's stated <a class="white" href="#">Privacy Policy</a> and <a class="white" href="#">Terms & Conditions</a>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">준비중(직접 연락주세요)</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="lmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
-                    </form>-->
-                    <!-- end of call me form -->
-                    
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-1 -->
-    <!-- end of call me -->
+            <div class="form-group">
+              <label class="form-label form-label-required" for="quick-project-type">Project Type</label>
+              <select id="quick-project-type" class="form-select" required>
+                <option value="">Select...</option>
+                <option value="infrastructure">Infrastructure Delivery</option>
+                <option value="ai-services">AI-Enhanced Infrastructure</option>
+                <option value="medical-ai">Medical AI Transformation</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
 
+            <div class="form-group">
+              <label class="form-label form-label-required" for="quick-message">Message</label>
+              <textarea id="quick-message" class="form-textarea" required></textarea>
+            </div>
 
+            <button type="submit" class="btn btn-primary w-full">Send Message</button>
+          </form>
+        </div>
 
+        <p style="margin-top: var(--space-4); color: var(--color-text-muted);">
+          Or reach us directly:<br>
+          💬 <a href="#" class="text-accent">WhatsApp</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Team -->
-    <div class="basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Leaders</h2>
-                    <p class="p-heading">Through our experiences we will lead the project with passion and responsibility <br> </p>
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
+        <!-- Company Info -->
+        <div class="footer-section">
+          <h4><span style="color: var(--color-accent);">JBIN</span> PROJECT</h4>
+          <p class="text-muted">Small boutique IT infrastructure firm delivering end-to-end infrastructure globally,
+            enhanced with AI research capability.</p>
+        </div>
 
-                    <!-- Team Member -->
-                    <div class="team-member">
-                        <div class="image-wrapper">
-                            <img class="img-fluid" src="images/team-1.png" alt="alternative">
-                        </div> <!-- end of image-wrapper -->
-                        <p class="p-large">Haebin Seong</p>
-                        <p class="job-title">Co Founder</p>
-                        <span class="social-icons">
-                            <span class="fa-stack">
-                                <a href="https://imnotkind.github.io/" target="_blank">
-                                    <span class="hexagon"></span>
-                                    <i class="far fa-id-card fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="https://github.com/imnotkind" target="_blank">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-github fa-stack-1x"></i>
-                                </a>
-                            
-                            </span>
-                        </span>
-                    </div> <!-- end of team-member -->
-                    <!-- end of team member -->
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="projects.html" class="footer-link">Projects</a></li>
+            <li><a href="team.html" class="footer-link">Team</a></li>
+            <li><a href="research.html" class="footer-link">Research</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
 
-                    <!-- Team Member -->
-                    <div class="team-member">
-                        <div class="image-wrapper">
-                            <img class="img-fluid" src="images/team-2.png" alt="alternative">
-                        </div> <!-- end of image wrapper -->
-                        <p class="p-large">Joonhyuk Suh</p>
-                        <p class="job-title">Co Founder </p>
-                        <span class="social-icons">
-                            <span class="fa-stack">
-                                <a href="https://www.linkedin.com/in/joonhyuk/" target="_blank">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="https://github.com/suh004757" target="_blank">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-github fa-stack-1x"></i>
-                                </a>
-                            </span>
+        <!-- Contact -->
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          <li><a href="#" class="footer-link">WhatsApp</a></li>
+          <li class="text-muted" style="margin-top: var(--space-2);">Seoul 🇰🇷 | Tokyo 🇯🇵</li>
+        </ul>
 
-                            <span class="fa-stack">
-                                <a href="https://www.instagram.com/suh004757/" target="_blank">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-instagram fa-stack-1x"></i>
-                                </a>
-                            </span>
-                        </span>
-                    </div> <!-- end of team-member -->
-                    <!-- end of team member -->
+        <!-- Social -->
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
 
-                 
-              
+      </div>
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of team -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 JBIN Project. All rights reserved.</p>
+        <p>Infrastructure Delivered. Globally.</p>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
 
-    <!-- About -->
-    <div id="about" class="counter">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-xl-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/about.jpg" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-7 col-xl-6">
-                    <div class="text-container">
-                        <div class="section-title">ABOUT</div>
-                        <h2>JBin Project will work for you anywhere & anytime. </h2>
-                        <p>We share and support projects around the world through collaboration with our partners.</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Remote Support Available</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Multi-Lingual Support Available</div>
-                            </li>
-                        </ul>
+  <!-- Simple form handler for quick contact -->
+  <script>
+    document.getElementById('quick-contact-form')?.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you for your message! We will get back to you within 24 hours.\n\nFor a more detailed inquiry, please visit our Contact page.');
+      this.reset();
+    });
+  </script>
 
-                        <!-- Counter -->
-                        <div id="counter">
-                            <div class="cell">
-                                <div class="counter-value number-count" data-count="24">24</div>
-                                <div class="counter-info">hours</div>
-                            </div>
-                            <div class="cell">
-                                <div class="counter-value number-count" data-count="365">365</div>
-                                <div class="counter-info">days</div>
-                            </div>
-                            <div class="cell">
-                                <div class="counter-value number-count" data-count="200">200</div>
-                                <div class="counter-info">regions </div>
-                            </div>
-                        </div>
-                        <!-- end of counter -->
-
-                    </div> <!-- end of text-container -->      
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of counter -->
-    <!-- end of about -->
-
-
-    <!-- Contact -->
-    <div id="contact" class="form-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <div class="section-title">CONTACT</div>
-                        <h2>What would you like help with?</h2>
-                        <p>Online & Offline Meeting available</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="address"><i class="fas fa-map-marker-alt"></i>Head Office: South Korea, Seoul , Remote Office</li>
-                            <li><i class="fas fa-phone"></i><a href="tel:050713470236">050713470236</a></li>
-                            <li><i class="fas fa-phone"></i><a href="tel:003024630820">+8250713470236</a></li>
-                            <li><i class="fas fa-envelope"></i><a href="mailto:admin@jbinproject.online">admin@jbinproject.online</a></li>
-                        </ul>
-
-                        <!-- 준비중
-                        <h3>Follow JBin Project On Social Media</h3>
-
-                        <span class="fa-stack">
-                            <a href="#">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-pinterest fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-behance fa-stack-1x"></i>
-                            </a>
-                        </span>-->
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col   
-                <div class="col-lg-6">
-             
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Your message</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I agree with JBin's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
-                    </form>  -->
-                    <!-- end of contact form -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-2 -->
-    <!-- end of contact -->
-
-
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="text-container about">
-                        <h4>JBin Project</h4>
-                        <p class="white">Business Reg No: 352-39-00575 <br>Co Founders: JoonhyukSuh & HaebinSeong<br>  </p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-md-2">
-                    <div class="text-container">
-                        <h4>Site Admin</h4>
-                        <ul class="list-unstyled li-space-lg white">
-                            <li>
-                                <a class="white" href="mailto:admin@jbinproject.online">admin@jbinproject.online</a>
-                            </li>
-                        </ul>
-                    </div> 
-                </div> 
-              
-         
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
-    <!-- end of footer -->
-
-
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2021 JBin Project</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright --> 
-    <!-- end of copyright -->
-    
-    	
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
 </body>
+
 </html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JBIN Project Portfolio - Selected infrastructure and AI projects">
+    <title>Our Projects - JBIN Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <style>
+        .filter-buttons {
+            display: flex;
+            gap: var(--space-2);
+            justify-content: center;
+            margin-bottom: var(--space-8);
+            flex-wrap: wrap;
+        }
+
+        .filter-button {
+            padding: 0.75rem 1.5rem;
+            background-color: transparent;
+            border: 2px solid var(--color-border);
+            color: var(--color-text-secondary);
+            font-weight: var(--font-semibold);
+            border-radius: var(--border-radius-md);
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .filter-button:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        .filter-button.active {
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+            color: var(--color-text-inverse);
+        }
+
+        .project-card {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--border-radius-md);
+            margin-bottom: var(--space-3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span style="color: var(--color-accent);">JBIN</span> PROJECT
+            </a>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link">Home</a></li>
+                <li><a href="services.html" class="navbar-link">Services</a></li>
+                <li><a href="projects.html" class="navbar-link">Projects</a></li>
+                <li><a href="team.html" class="navbar-link">Team</a></li>
+                <li><a href="research.html" class="navbar-link">Research</a></li>
+                <li><a href="contact.html" class="navbar-link">Contact</a></li>
+                <!-- Language toggle removed -->
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="margin-top: 80px;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Our Work</h1>
+                <p class="section-subtitle">Selected projects across infrastructure delivery and AI innovation.<br>(Many
+                    details under NDA - contact us for specifics)</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-button active" data-filter="all">All</button>
+                <button class="filter-button" data-filter="infrastructure">Infrastructure</button>
+                <button class="filter-button" data-filter="ai-enhanced">AI-Enhanced</button>
+                <button class="filter-button" data-filter="global">Global Projects</button>
+            </div>
+
+            <div class="card-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card card" data-category="infrastructure global">
+                    <img src="C:/Users/tjwns/.gemini/antigravity/brain/21516891-e14f-4a3e-bc69-6cab543e1603/project_realestate_thumbnail_1765885303690.png"
+                        alt="Real Estate Platform" class="project-image">
+                    <span class="badge badge-accent">Active Development</span>
+                    <h3 style="margin-top: var(--space-2);">Real Estate Platform 2024</h3>
+                    <p class="text-muted" style="font-size: var(--text-sm); margin-bottom: var(--space-2);">Real Estate
+                    </p>
+                    <p>Full-stack platform infrastructure for major Korean property company. Modern web architecture,
+                        cloud deployment, ongoing development.</p>
+                    <p style="margin-top: var(--space-2);"><strong>Tech:</strong> Supabase, Cloud Infrastructure, Modern
+                        Web Stack</p>
+                    <div style="margin-top: var(--space-3);">
+                        <span class="badge badge-nda">Case details under NDA</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card card" data-category="infrastructure global">
+                    <img src="C:/Users/tjwns/.gemini/antigravity/brain/21516891-e14f-4a3e-bc69-6cab543e1603/project_infrastructure_thumbnail_1765885325125.png"
+                        alt="Global Infrastructure" class="project-image">
+                    <span class="badge">Enterprise</span>
+                    <h3 style="margin-top: var(--space-2);">Multi-Site Infrastructure</h3>
+                    <p class="text-muted" style="font-size: var(--text-sm); margin-bottom: var(--space-2);">
+                        Enterprise/Manufacturing</p>
+                    <p>Global infrastructure deployment across multiple countries. Cross-border coordination, regulatory
+                        compliance.</p>
+                    <p style="margin-top: var(--space-2);"><strong>Tech:</strong> Datacenter, Network, Enterprise IT</p>
+                    <div style="margin-top: var(--space-3);">
+                        <span class="badge badge-nda">Details available on request</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card card card-highlight" data-category="ai-enhanced infrastructure">
+                    <div
+                        style="width: 100%; height: 200px; background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(26, 54, 93, 0.3) 100%); border-radius: var(--border-radius-md); margin-bottom: var(--space-3); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        🤖</div>
+                    <span class="badge badge-accent">AI Pilot</span>
+                    <h3 style="margin-top: var(--space-2);">AI Cost Optimization Pilot</h3>
+                    <p class="text-muted" style="font-size: var(--text-sm); margin-bottom: var(--space-2);">Innovation
+                    </p>
+                    <p>First deployment of research-backed cost modeling in production. Predictive maintenance and
+                        optimization frameworks.</p>
+                    <p style="margin-top: var(--space-2);"><strong>Tech:</strong> Machine Learning, Infrastructure
+                        Analytics</p>
+                    <div style="margin-top: var(--space-3);">
+                        <span class="badge badge-nda">More details under NDA</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card card" data-category="infrastructure">
+                    <div
+                        style="width: 100%; height: 200px; background: linear-gradient(135deg, rgba(72, 187, 120, 0.1) 0%, rgba(26, 54, 93, 0.3) 100%); border-radius: var(--border-radius-md); margin-bottom: var(--space-3); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        🏥</div>
+                    <span class="badge badge-success">Completed</span>
+                    <h3 style="margin-top: var(--space-2);">Pharmaceutical Infrastructure</h3>
+                    <p class="text-muted" style="font-size: var(--text-sm); margin-bottom: var(--space-2);">
+                        Medical/Pharma</p>
+                    <p>Enterprise IT infrastructure for pharmaceutical company. Regulatory-compliant deployment, secure
+                        data handling.</p>
+                    <p style="margin-top: var(--space-2);"><strong>Tech:</strong> Enterprise IT, Secure Infrastructure
+                    </p>
+                    <div style="margin-top: var(--space-3);">
+                        <span class="badge badge-nda">Client details confidential</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card card" data-category="infrastructure global">
+                    <div
+                        style="width: 100%; height: 200px; background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(45, 55, 72, 0.3) 100%); border-radius: var(--border-radius-md); margin-bottom: var(--space-3); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        🌐</div>
+                    <span class="badge">Global</span>
+                    <h3 style="margin-top: var(--space-2);">Korea-Japan Network Infrastructure</h3>
+                    <p class="text-muted" style="font-size: var(--text-sm); margin-bottom: var(--space-2);">Finance</p>
+                    <p>Cross-border network infrastructure connecting Korean and Japanese operations. Low-latency
+                        requirements, high availability.</p>
+                    <p style="margin-top: var(--space-2);"><strong>Tech:</strong> Network Infrastructure, Multi-site</p>
+                    <div style="margin-top: var(--space-3);">
+                        <span class="badge badge-nda">Details available on request</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card card" data-category="infrastructure">
+                    <div
+                        style="width: 100%; height: 200px; background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(26, 54, 93, 0.3) 100%); border-radius: var(--border-radius-md); margin-bottom: var(--space-3); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        🏢</div>
+                    <span class="badge">Datacenter</span>
+                    <h3 style="margin-top: var(--space-2);">Datacenter Modernization</h3>
+                    <p class="text-muted" style="font-size: var(--text-sm); margin-bottom: var(--space-2);">
+                        Manufacturing</p>
+                    <p>Legacy datacenter modernization for manufacturing company. Hardware refresh, virtualization,
+                        improved efficiency.</p>
+                    <p style="margin-top: var(--space-2);"><strong>Tech:</strong> Datacenter, Virtualization</p>
+                    <div style="margin-top: var(--space-3);">
+                        <span class="badge badge-nda">Client details confidential</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center" style="margin-top: var(--space-8);">
+                <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+                    <h3>Want to See More?</h3>
+                    <p>Many of our projects are under NDA. Contact us to discuss relevant case studies for your
+                        industry.</p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-3);">Contact Us →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><span style="color: var(--color-accent);">JBIN</span> PROJECT</h4>
+                    <p class="text-muted">Infrastructure Delivered. Globally.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="projects.html" class="footer-link">Projects</a></li>
+                        <li><a href="team.html" class="footer-link">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JBIN Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
+
+</body>
+
+</html>

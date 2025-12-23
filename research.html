@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JBIN Project Research - Publications at ICLR, NeurIPS, ICRA and more">
+    <title>Research - JBIN Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <style>
+        .paper-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-6);
+            margin-bottom: var(--space-6);
+            transition: all var(--transition-base);
+        }
+
+        .paper-card:hover {
+            border-color: var(--color-accent);
+            background-color: var(--color-bg-card-hover);
+        }
+
+        .paper-title {
+            font-size: var(--text-xl);
+            font-weight: var(--font-bold);
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-2);
+        }
+
+        .paper-authors {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-1);
+        }
+
+        .paper-venue {
+            color: var(--color-accent);
+            font-weight: var(--font-semibold);
+            margin-bottom: var(--space-3);
+        }
+
+        .paper-links {
+            display: flex;
+            gap: var(--space-2);
+            flex-wrap: wrap;
+            margin-top: var(--space-3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span style="color: var(--color-accent);">JBIN</span> PROJECT
+            </a>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link">Home</a></li>
+                <li><a href="services.html" class="navbar-link">Services</a></li>
+                <li><a href="projects.html" class="navbar-link">Projects</a></li>
+                <li><a href="team.html" class="navbar-link">Team</a></li>
+                <li><a href="research.html" class="navbar-link">Research</a></li>
+                <li><a href="contact.html" class="navbar-link">Contact</a></li>
+                <!-- Language toggle removed -->
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="margin-top: 80px;">
+        <div class="container-narrow">
+            <div class="section-header">
+                <h1 class="section-title">Research to Practice</h1>
+                <p class="section-subtitle">We publish at top AI conferences.<br>Then we apply it to real
+                    infrastructure.</p>
+            </div>
+
+            <div class="card" style="margin-bottom: var(--space-8);">
+                <h3 style="margin-bottom: var(--space-3);">Why Research Matters</h3>
+                <p style="margin-bottom: var(--space-3);">Most infrastructure companies rely on best practices and
+                    experience. We add mathematical rigor and AI innovation.</p>
+                <p style="margin-bottom: var(--space-4);">Our research isn't academic exercise - it's the foundation for
+                    better infrastructure delivery.</p>
+                <div style="display: flex; gap: var(--space-2); flex-wrap: wrap;">
+                    <span class="badge badge-accent">ICLR</span>
+                    <span class="badge badge-accent">NeurIPS</span>
+                    <span class="badge badge-accent">ICRA</span>
+                    <span class="badge badge-accent">ACL</span>
+                    <span class="badge badge-accent">AAAI</span>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: var(--space-6);">Publications</h2>
+
+            <!-- 2024-2025 Publications -->
+            <h3 style="color: var(--color-accent); margin-bottom: var(--space-4);">2024-2025</h3>
+
+            <div class="paper-card">
+                <p class="paper-title">CostNav: A Navigation Benchmark for Cost-Aware Evaluation of Embodied Agents</p>
+                <p class="paper-authors">Haebin Seong*, et al. (*equal contribution)</p>
+                <p class="paper-venue">arXiv, November 2024</p>
+                <p>Economic modeling for autonomous systems. First benchmark evaluating robots by profit, not just task
+                    success.</p>
+                <p
+                    style="margin-top: var(--space-3); padding: var(--space-3); background-color: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--color-accent); border-radius: var(--border-radius-sm); font-size: var(--text-sm);">
+                    <strong>Relevance to Infrastructure:</strong> Cost modeling methodology applicable to datacenter and
+                    infrastructure optimization.
+                </p>
+                <div class="paper-links">
+                    <a href="#" class="btn btn-sm btn-ghost">arXiv</a>
+                    <a href="#" class="btn btn-sm btn-ghost">Project Page</a>
+                    <a href="#" class="btn btn-sm btn-ghost">Code</a>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <p class="paper-title">HarmAug: Effective Data Augmentation for Knowledge Distillation of Safety Guard
+                    Models</p>
+                <p class="paper-authors">Seanie Lee*, Haebin Seong*, et al.</p>
+                <p class="paper-venue">ICLR 2025</p>
+                <p>AI safety through efficient knowledge distillation. Smaller, faster safety models without sacrificing
+                    accuracy.</p>
+                <p
+                    style="margin-top: var(--space-3); padding: var(--space-3); background-color: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--color-accent); border-radius: var(--border-radius-sm); font-size: var(--text-sm);">
+                    <strong>Relevance to Infrastructure:</strong> Efficient AI deployment for resource-constrained
+                    environments.
+                </p>
+                <div class="paper-links">
+                    <a href="#" class="btn btn-sm btn-ghost">Paper</a>
+                    <a href="#" class="btn btn-sm btn-ghost">Code</a>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <p class="paper-title">SafeRoute: Adaptive Model Selection for Efficient and Accurate Safety Guardrails
+                </p>
+                <p class="paper-authors">Seanie Lee*, Dong Bok Lee*, et al. (Haebin Seong co-author)</p>
+                <p class="paper-venue">ACL 2025</p>
+                <p>Dynamic model selection for AI safety applications.</p>
+                <p
+                    style="margin-top: var(--space-3); padding: var(--space-3); background-color: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--color-accent); border-radius: var(--border-radius-sm); font-size: var(--text-sm);">
+                    <strong>Relevance to Infrastructure:</strong> Adaptive resource allocation for optimal
+                    performance-cost trade-offs.
+                </p>
+                <div class="paper-links">
+                    <a href="#" class="btn btn-sm btn-ghost">Paper</a>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <p class="paper-title">D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied
+                    AI</p>
+                <p class="paper-authors">Suhwan Choi*, Jaeyoon Jung*, Haebin Seong*, et al.</p>
+                <p class="paper-venue">arXiv, 2024</p>
+                <p>Transfer learning from desktop environments to robotics. 96.6% success on manipulation tasks.</p>
+                <p
+                    style="margin-top: var(--space-3); padding: var(--space-3); background-color: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--color-accent); border-radius: var(--border-radius-sm); font-size: var(--text-sm);">
+                    <strong>Relevance to Infrastructure:</strong> Transfer learning approaches for infrastructure
+                    automation.
+                </p>
+                <div class="paper-links">
+                    <a href="#" class="btn btn-sm btn-ghost">Project Page</a>
+                    <a href="#" class="btn btn-sm btn-ghost">Code</a>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <p class="paper-title">CANVAS: Commonsense-Aware Navigation System for Intuitive Human-Robot Interaction
+                </p>
+                <p class="paper-authors">Suhwan Choi*, et al. (Haebin Seong co-author)</p>
+                <p class="paper-venue">ICRA 2025 • NeurIPS 2024 Workshop (Outstanding Paper)</p>
+                <p>Commonsense reasoning for robot navigation.</p>
+                <p
+                    style="margin-top: var(--space-3); padding: var(--space-3); background-color: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--color-accent); border-radius: var(--border-radius-sm); font-size: var(--text-sm);">
+                    <strong>Relevance to Infrastructure:</strong> Decision-making frameworks for autonomous
+                    infrastructure systems.
+                </p>
+                <div class="paper-links">
+                    <a href="#" class="btn btn-sm btn-ghost">Project Page</a>
+                    <a href="#" class="btn btn-sm btn-ghost">Paper</a>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <p class="paper-title">FedSVD: Adaptive Orthogonalization for Private Federated Learning with LoRA</p>
+                <p class="paper-authors">Seanie Lee*, et al. (Haebin Seong co-author)</p>
+                <p class="paper-venue">NeurIPS 2025</p>
+                <p>Privacy-preserving federated learning optimization.</p>
+                <p
+                    style="margin-top: var(--space-3); padding: var(--space-3); background-color: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--color-accent); border-radius: var(--border-radius-sm); font-size: var(--text-sm);">
+                    <strong>Relevance to Infrastructure:</strong> Secure AI deployment across distributed
+                    infrastructure.
+                </p>
+                <div class="paper-links">
+                    <a href="#" class="btn btn-sm btn-ghost">Paper</a>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--color-border); margin: var(--space-8) 0;">
+
+            <!-- Research Areas -->
+            <h2 style="margin-bottom: var(--space-6);">Research Areas</h2>
+
+            <div class="three-column">
+                <div class="card">
+                    <h4 style="color: var(--color-accent);">🤖 Embodied AI & Robotics</h4>
+                    <ul
+                        style="list-style: none; padding: 0; line-height: var(--leading-relaxed); color: var(--color-text-secondary);">
+                        <li>• Economic modeling</li>
+                        <li>• Cost-aware decision making</li>
+                        <li>• Navigation and automation</li>
+                        <li>• Vision-action learning</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--color-accent);">🛡️ AI Safety & Security</h4>
+                    <ul
+                        style="list-style: none; padding: 0; line-height: var(--leading-relaxed); color: var(--color-text-secondary);">
+                        <li>• LLM guardrails</li>
+                        <li>• Red-teaming and jailbreak defense</li>
+                        <li>• Efficient safety models</li>
+                        <li>• Secure AI deployment</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--color-accent);">⚙️ Infrastructure Optimization</h4>
+                    <ul
+                        style="list-style: none; padding: 0; line-height: var(--leading-relaxed); color: var(--color-text-secondary);">
+                        <li>• Cost modeling frameworks</li>
+                        <li>• Resource allocation</li>
+                        <li>• Predictive analytics</li>
+                        <li>• Performance optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--color-border); margin: var(--space-8) 0;">
+
+            <!-- From Research to Product -->
+            <div class="card"
+                style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(0, 212, 255, 0.02) 100%); border-color: var(--color-accent);">
+                <h2 style="margin-bottom: var(--space-4);">From Research to Product</h2>
+                <p style="margin-bottom: var(--space-4);">How We Apply Research</p>
+
+                <div class="two-column">
+                    <div>
+                        <h4 style="color: var(--color-accent);">1. Publish & Validate</h4>
+                        <p style="margin-bottom: var(--space-4);">Peer-reviewed research at top conferences. Academic
+                            rigor, proven approaches.</p>
+
+                        <h4 style="color: var(--color-accent);">2. Prototype & Test</h4>
+                        <p>Apply to internal infrastructure first. Validate in controlled environments.</p>
+                    </div>
+
+                    <div>
+                        <h4 style="color: var(--color-accent);">3. Pilot Deployment</h4>
+                        <p style="margin-bottom: var(--space-4);">Early customer projects. Real-world validation and
+                            refinement.</p>
+
+                        <h4 style="color: var(--color-accent);">4. Production Service</h4>
+                        <p>Full service offering. Proven, reliable, scalable.</p>
+                    </div>
+                </div>
+
+                <p
+                    style="margin-top: var(--space-6); padding: var(--space-4); background-color: rgba(0, 212, 255, 0.1); border-radius: var(--border-radius-md);">
+                    <strong>Current Stage:</strong><br>
+                    • Cost modeling: Pilot deployments ✓<br>
+                    • Predictive maintenance: Early testing<br>
+                    • Infrastructure automation: Research → Prototype
+                </p>
+            </div>
+
+
+
+            <!-- Research Background -->
+            <div class="card">
+                <h2 style="margin-bottom: var(--space-3);">Research Background</h2>
+                <p style="margin-bottom: var(--space-4);">Our team members bring experience from these institutions:</p>
+                <ul
+                    style="list-style: none; padding: 0; line-height: var(--leading-loose); margin-bottom: var(--space-4);">
+                    <li>• KAIST (Machine Learning and AI Lab)</li>
+                    <li>• Maum.AI (WoRV Team)</li>
+                    <li>• Theori (AI Security)</li>
+                    <li>• Yonsei University</li>
+                    <li>• Postech (Laboratory for Unix Security)</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><span style="color: var(--color-accent);">JBIN</span> PROJECT</h4>
+                    <p class="text-muted">Research to Practice</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="projects.html" class="footer-link">Projects</a></li>
+                        <li><a href="team.html" class="footer-link">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JBIN Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
