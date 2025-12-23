@@ -360,6 +360,11 @@
         display: flex;
     }
 
+    .navbar-logo {
+        font-size: var(--text-lg);
+        /* Smaller on mobile */
+    }
+
     .navbar-menu {
         position: fixed;
         top: 60px;
@@ -385,6 +390,14 @@
 
     .navbar-link::after {
         display: none;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+    .navbar-logo {
+        font-size: var(--text-base);
+        /* Even smaller for very small screens */
     }
 }
 
@@ -556,6 +569,23 @@
     .hero-cta .btn {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+        /* Smaller to prevent clipping */
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-lg);
+    }
+
+    .hero-tagline {
+        font-size: var(--text-base);
     }
 }
 
