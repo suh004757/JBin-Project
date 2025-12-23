@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="JBIN Project - Trusted by 20+ global enterprises including JP Morgan, Goldman Sachs, Microsoft, AbbVie, and BMS for infrastructure delivery.">
+    <meta name="keywords"
+        content="enterprise clients, global infrastructure, JP Morgan, Goldman Sachs, Microsoft, AbbVie, BMS, datacenter clients">
+    <meta name="author" content="JBIN Project">
+
+    <title>Our End Customers - JBIN Project</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <style>
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-4);
+            margin-top: var(--space-6);
+        }
+
+        .client-card {
+            background: var(--color-bg-primary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-5);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .client-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .client-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 212, 255, 0.15);
+        }
+
+        .client-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .client-logo {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-bottom: var(--space-3);
+            font-family: var(--font-heading);
+        }
+
+        .client-industry {
+            display: inline-block;
+            padding: var(--space-1) var(--space-2);
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: var(--border-radius-sm);
+            font-size: var(--text-xs);
+            color: var(--color-accent);
+            margin-bottom: var(--space-3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .client-description {
+            color: var(--color-text-secondary);
+            font-size: var(--text-sm);
+            line-height: var(--leading-relaxed);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: var(--space-5);
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(0, 212, 255, 0.02));
+            border-radius: var(--border-radius-lg);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: var(--text-4xl);
+            font-weight: 800;
+            color: var(--color-accent);
+            font-family: var(--font-heading);
+            margin-bottom: var(--space-2);
+        }
+
+        .stat-label {
+            color: var(--color-text-secondary);
+            font-size: var(--text-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .featured-clients {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-charcoal-dark) 100%);
+            padding: var(--space-8) 0;
+            margin: var(--space-8) 0;
+            border-radius: var(--border-radius-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-clients::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span style="color: var(--color-accent);">JBIN</span> PROJECT
+            </a>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link">Home</a></li>
+                <li><a href="services.html" class="navbar-link">Services</a></li>
+                <li><a href="projects.html" class="navbar-link">Projects</a></li>
+                <li><a href="team.html" class="navbar-link">Team</a></li>
+                <li><a href="customers.html" class="navbar-link active">Customers</a></li>
+                <li><a href="research.html" class="navbar-link">Research</a></li>
+                <li><a href="contact.html" class="navbar-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Our End Customers</h1>
+            <p class="hero-subtitle">Trusted by 20+ Global Enterprises</p>
+            <p class="hero-tagline">Direct delivery to the world's leading companies</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+       STATS SECTION
+       ============================================ -->
+    <section class="section">
+        <div class="container">
+            <div class="stats-grid fade-in">
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Global Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Industries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Direct Delivery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+       FEATURED CLIENTS
+       ============================================ -->
+    <section class="section">
+        <div class="container">
+            <div class="featured-clients">
+                <div style="padding: 0 var(--space-6); position: relative; z-index: 1;">
+                    <div class="section-header text-center">
+                        <h2 class="section-title">Featured Enterprise Clients</h2>
+                        <p class="section-subtitle">Leading global companies trust us for critical infrastructure
+                            delivery</p>
+                    </div>
+
+                    <div class="client-grid" style="margin-top: var(--space-6);">
+
+                        <!-- JP Morgan -->
+                        <div class="client-card">
+                            <div class="client-industry">Financial Services</div>
+                            <div class="client-logo">JP Morgan</div>
+                            <div class="client-description">
+                                Global infrastructure deployment and datacenter operations for one of the world's
+                                largest financial institutions.
+                            </div>
+                        </div>
+
+                        <!-- Goldman Sachs -->
+                        <div class="client-card">
+                            <div class="client-industry">Investment Banking</div>
+                            <div class="client-logo">Goldman Sachs</div>
+                            <div class="client-description">
+                                Enterprise network infrastructure and security implementation for critical financial
+                                systems.
+                            </div>
+                        </div>
+
+                        <!-- Microsoft -->
+                        <div class="client-card">
+                            <div class="client-industry">Technology</div>
+                            <div class="client-logo">Microsoft</div>
+                            <div class="client-description">
+                                Datacenter support and infrastructure services for global technology operations.
+                            </div>
+                        </div>
+
+                        <!-- AbbVie -->
+                        <div class="client-card">
+                            <div class="client-industry">Pharmaceutical</div>
+                            <div class="client-logo">AbbVie</div>
+                            <div class="client-description">
+                                High-value infrastructure projects including network deployment and security
+                                implementation.
+                            </div>
+                        </div>
+
+                        <!-- BMS -->
+                        <div class="client-card">
+                            <div class="client-industry">Pharmaceutical</div>
+                            <div class="client-logo">Bristol Myers Squibb</div>
+                            <div class="client-description">
+                                Enterprise IT infrastructure and datacenter operations for pharmaceutical research
+                                facilities.
+                            </div>
+                        </div>
+
+                        <!-- BD -->
+                        <div class="client-card">
+                            <div class="client-industry">Medical Devices</div>
+                            <div class="client-logo">BD (Becton Dickinson)</div>
+                            <div class="client-description">
+                                Country-level IT infrastructure leadership and hybrid cloud integration for medical
+                                device operations.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+       ALL CLIENTS
+       ============================================ -->
+    <section class="section" style="background-color: var(--color-bg-secondary);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Complete Client Portfolio</h2>
+                <p class="section-subtitle">Diverse industries, consistent excellence</p>
+            </div>
+
+            <div class="client-grid fade-in">
+
+                <!-- Amgen -->
+                <div class="client-card">
+                    <div class="client-industry">Biotechnology</div>
+                    <div class="client-logo">Amgen</div>
+                    <div class="client-description">
+                        Infrastructure consulting and deployment for biotech research facilities.
+                    </div>
+                </div>
+
+                <!-- State Street Bank -->
+                <div class="client-card">
+                    <div class="client-industry">Financial Services</div>
+                    <div class="client-logo">State Street Bank</div>
+                    <div class="client-description">
+                        Network infrastructure and security services for banking operations.
+                    </div>
+                </div>
+
+                <!-- Google -->
+                <div class="client-card">
+                    <div class="client-industry">Technology</div>
+                    <div class="client-logo">Google</div>
+                    <div class="client-description">
+                        Datacenter project support and infrastructure deployment.
+                    </div>
+                </div>
+
+                <!-- Warner Brothers -->
+                <div class="client-card">
+                    <div class="client-industry">Media & Entertainment</div>
+                    <div class="client-logo">Warner Brothers</div>
+                    <div class="client-description">
+                        High-value infrastructure projects for media production facilities.
+                    </div>
+                </div>
+
+                <!-- Lenovo -->
+                <div class="client-card">
+                    <div class="client-industry">Technology</div>
+                    <div class="client-logo">Lenovo</div>
+                    <div class="client-description">
+                        Infrastructure consulting and deployment for global manufacturing operations.
+                    </div>
+                </div>
+
+                <!-- Electrolux -->
+                <div class="client-card">
+                    <div class="client-industry">Manufacturing</div>
+                    <div class="client-logo">Electrolux</div>
+                    <div class="client-description">
+                        Global infrastructure deployment for manufacturing facilities.
+                    </div>
+                </div>
+
+                <!-- Thomson Reuters -->
+                <div class="client-card">
+                    <div class="client-industry">Information Services</div>
+                    <div class="client-logo">Thomson Reuters</div>
+                    <div class="client-description">
+                        Network infrastructure and system engineering support.
+                    </div>
+                </div>
+
+                <!-- POSCO -->
+                <div class="client-card">
+                    <div class="client-industry">Steel & Manufacturing</div>
+                    <div class="client-logo">POSCO</div>
+                    <div class="client-description">
+                        Datacenter support and Cisco network firewall migration.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+       INDUSTRIES SERVED
+       ============================================ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Industries We Serve</h2>
+                <p class="section-subtitle">Deep expertise across multiple sectors</p>
+            </div>
+
+            <div class="two-column fade-in" style="margin-top: var(--space-6);">
+
+                <div class="card">
+                    <h3 style="color: var(--color-accent); margin-bottom: var(--space-3);">Financial Services</h3>
+                    <ul
+                        style="list-style: none; padding: 0; line-height: var(--leading-loose); color: var(--color-text-secondary);">
+                        <li>• Investment Banking</li>
+                        <li>• Commercial Banking</li>
+                        <li>• Asset Management</li>
+                        <li>• Insurance</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--color-accent); margin-bottom: var(--space-3);">Healthcare & Pharma</h3>
+                    <ul
+                        style="list-style: none; padding: 0; line-height: var(--leading-loose); color: var(--color-text-secondary);">
+                        <li>• Pharmaceutical Research</li>
+                        <li>• Biotechnology</li>
+                        <li>• Medical Devices</li>
+                        <li>• Healthcare IT</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--color-accent); margin-bottom: var(--space-3);">Technology</h3>
+                    <ul
+                        style="list-style: none; padding: 0; line-height: var(--leading-loose); color: var(--color-text-secondary);">
+                        <li>• Cloud Services</li>
+                        <li>• Enterprise Software</li>
+                        <li>• IT Services</li>
+                        <li>• Telecommunications</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--color-accent); margin-bottom: var(--space-3);">Manufacturing & Others</h3>
+                    <ul
+                        style="list-style: none; padding: 0; line-height: var(--leading-loose); color: var(--color-text-secondary);">
+                        <li>• Heavy Manufacturing</li>
+                        <li>• Consumer Electronics</li>
+                        <li>• Media & Entertainment</li>
+                        <li>• Security Systems</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+       CTA SECTION
+       ============================================ -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-charcoal-dark) 100%);">
+        <div class="container">
+            <div class="container-narrow text-center fade-in">
+                <h2 class="section-title">Join Our Client Portfolio</h2>
+                <p class="section-subtitle" style="margin-bottom: var(--space-6);">
+                    Experience the same direct, hands-on infrastructure delivery<br>
+                    that global enterprises trust.
+                </p>
+                <div style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary btn-lg">Start a Conversation</a>
+                    <a href="projects.html" class="btn btn-secondary btn-lg">View Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+       FOOTER
+       ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h4><span style="color: var(--color-accent);">JBIN</span> PROJECT</h4>
+                    <p class="text-muted">Small boutique IT infrastructure firm delivering end-to-end infrastructure
+                        globally,
+                        enhanced with AI research capability.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="projects.html" class="footer-link">Projects</a></li>
+                        <li><a href="team.html" class="footer-link">Team</a></li>
+                        <li><a href="customers.html" class="footer-link">Customers</a></li>
+                        <li><a href="research.html" class="footer-link">Research</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    <li><a href="#" class="footer-link">WhatsApp</a></li>
+                    <li class="text-muted" style="margin-top: var(--space-2);">Seoul-Based 🇰🇷</li>
+                </ul>
+
+                <!-- Social -->
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 JBIN Project. All rights reserved.</p>
+                <p>Infrastructure Delivered. Globally.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
